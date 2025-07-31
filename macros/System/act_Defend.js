@@ -4,6 +4,6 @@
 await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Defend",
-  type: "Action",
-  description: `When you take the <i>Defend</i> action, all ability power rolls made against you have a double bane until the start of your next turn. You gain no benefit from this action while another creature is taunted by you.`
+  type: "Main Action",
+  description: `When a creature takes the Defend action, ability rolls made against them have a double bane until the start of their next turn. A creature gains no benefit from this action while another creature is taunted by them.`
 });

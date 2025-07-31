@@ -5,5 +5,5 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Disengage",
   type: "Move Action",
-  description: `When you take the <i>Disengage</i> move action, you can shift 1 square. Some class features, kits, or other rules let you shift more than 1 square when you take this move action. If they do, you can break up the movement granted by this move action with your maneuver and action however you wish.`
+  description: `When a creature takes the Disengage move action, they can shift 1 square. Certain class features, kits, and other rules allow a creature to shift more than 1 square when they disengage. A creature who does so can break up their shift with their maneuver and action however they wish.`
 });

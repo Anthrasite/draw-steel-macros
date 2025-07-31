@@ -6,9 +6,9 @@ await game.macros.getName("ShareAbility").execute({
   name: "Dancer",
   flavorText: "You enter a flow state that makes you nearly impossible to pin down.",
   resourceCost: 7,
-  keywords: "-",
+  keywords: "—",
   type: "Maneuver",
   distance: "Self",
   target: "Self",
-  effect: "Until the end of the encounter, whenever an enemy moves adjacent to you or damages you, you can take the <i>Disengage</i> move action as a free triggered action."
+  effect: "Until the end of the encounter, whenever an enemy moves or is forced moved adjacent to you or damages you, you can take the Disengage move action as a free triggered action."
 });

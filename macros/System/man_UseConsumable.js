@@ -5,5 +5,5 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Use Consumable",
   type: "Maneuver",
-  description: `Unless otherwise noted in a treasure’s description, you can use a consumable treasure, such as a potion, with this maneuver. You can use this maneuver to administer a potion or other consumable that benefits the user to a willing, adjacent creature instead of yourself.`
+  description: `Unless otherwise noted in its description, a creature can activate a consumable treasure such as a potion with the Use Consumable maneuver. A creature can use this maneuver to administer a consumable treasure that benefits the user either to themself or to a willing adjacent creature.`
 });

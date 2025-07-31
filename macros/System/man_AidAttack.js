@@ -5,5 +5,5 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Aid Attack",
   type: "Maneuver",
-  description: `Choose an enemy adjacent to you. The next ability power roll an ally who makes against that creature before the start of your next turn has an edge.`
+  description: `A creature who uses the Aid Attack maneuver chooses an enemy adjacent to them. The next ability roll an ally makes against that enemy before the start of the aiding creature’s next turn gains an edge.`
 });

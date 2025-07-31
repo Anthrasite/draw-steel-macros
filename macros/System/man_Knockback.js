@@ -7,10 +7,11 @@ await game.macros.getName("ShareAbility").execute({
   keywords: "Melee, Weapon",
   type: "Maneuver",
   distance: "Melee 1",
-  target: "1 creature no more than 1 size larger than you",
+  target: "One creature",
+  description: "A creature wanting to push an adjacent creature away from them can attempt to shove that creature using the following ability:",
   powerRollStat: "Might",
   tier1Effect: "Push 1",
   tier2Effect: "Push 2",
   tier3Effect: "Push 3",
-  effect: "You gain an edge on the power roll if the creature’s size is smaller than yours."
+  effect: "You can usually target only creatures of your size or smaller. If your Might score is 2 or higher, you can target any creature with a size equal to or less than your Might score."
 });
