@@ -1,6 +1,6 @@
 //@id=kZ8RUMt2GmlrCX5h
 //@name=Stand Tough
-//@img=modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png
+//@img=modules/draw-steel-macros/icons/ancestry/dwarf.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Stand Tough",

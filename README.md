@@ -1,12 +1,21 @@
-# Draw Steel Playtest Macros
+# Draw Steel Macros
 
 ![Foundry v12](https://img.shields.io/badge/foundry-v12-green)
 
-A Foundry VTT module containing several compendiums of macros that can be used for running a playtest game of Draw Steel. These macros allow abilities and features to be sent to the chat with a button that automatically rolls a power roll, calculates the resulting damage, deducts the resource cost, and more.
+A Foundry VTT module containing several compendiums of macros that can be used for running a game of Draw Steel. These macros allow abilities and features to be sent to the chat with a button that automatically rolls a power roll, calculates the resulting damage, deducts the resource cost, and more.
 
 General macros for managing health, recoveries, resource, surges, persistent effects, etc. during combat have also been implemented (most of which are found in the **Combat** compendium).
 
-Note that these macros only include a subset of the complete Draw Steel playtest ruleset.
+Note that these macros only include a subset of the complete Draw Steel ruleset:
+- **Ancestries:** Devil, Dwarf, Human
+- **Classes:** Paragon Creation Censor (level 1-4), Green Elementalist (level 1-4), Harlequin Mask Shadow (level 1-4)
+- **Kits:** All
+- **Perks:** All
+- **Complications:** Getting Too Old for This, Indebted, Shattered Legacy
+- **Consumables:** 1st Echelon
+- **Trinkets:** 1st Echelon
+- **Leveled Treasure:** All
+- **Titles:** Zombie Slayer
 
 ## Setup and Usage
 
@@ -25,12 +34,14 @@ Once they are imported, you should see them in the Macro Directory (which can be
 To use the macros, each actor will need to be configured with the following attributes which are expected by the macros, and the health and power should be updated to include the stamina and recoveries, respectively. If you try to use the macros without doing this, you will get errors indicating which which attributes are missing or misconfigured.
 
     class [String]
+    implementEnhancement [Number] - Optional
     level [Number]
     persistentCost [String]
     resource [Number] - The label must be set to the name of the resource as well
     surges [Number]
     tempHealth [Number]
     victories [Number]
+    weaponEnhancement [Number] - Optional
     characteristics [Number group]
     - agility [Number]
     - intuition [Number]

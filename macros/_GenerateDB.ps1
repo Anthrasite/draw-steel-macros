@@ -26,18 +26,18 @@ Get-ChildItem $PSScriptRoot -Directory -Recurse | ForEach-Object {
             { $imgPath = $imgMatches[0].Matches[0].Groups[1].Value }
         else {
             $imgPath = switch ($dirName) {
-                "Ancestry_Devil" { "modules/draw-steel-playtest-macros/icons/ancestry/devil.png" }
-                "Ancestry_DragonKnight" { "modules/draw-steel-playtest-macros/icons/ancestry/dragon-knight.png" }
-                "Ancestry_Dwarf" { "modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png" }
-                "Ancestry_Hakaan" { "modules/draw-steel-playtest-macros/icons/ancestry/hakaan.png" }
-                "Ancestry_HighElf" { "modules/draw-steel-playtest-macros/icons/ancestry/high-elf.png" }
-                "Ancestry_Human" { "modules/draw-steel-playtest-macros/icons/ancestry/human.png" }
-                "Ancestry_Memonek" { "modules/draw-steel-playtest-macros/icons/ancestry/memonek.png" }
-                "Ancestry_Orc" { "modules/draw-steel-playtest-macros/icons/ancestry/orc.png" }
-                "Ancestry_Polder" { "modules/draw-steel-playtest-macros/icons/ancestry/polder.png" }
-                "Ancestry_Revenant" { "modules/draw-steel-playtest-macros/icons/ancestry/revenant.png" }
-                "Ancestry_TimeRaider" { "modules/draw-steel-playtest-macros/icons/ancestry/time-raider.png" }
-                "Ancestry_WodeElf" { "modules/draw-steel-playtest-macros/icons/ancestry/wode-elf.png" }
+                "Ancestry_Devil" { "modules/draw-steel-macros/icons/ancestry/devil.png" }
+                "Ancestry_DragonKnight" { "modules/draw-steel-macros/icons/ancestry/dragon-knight.png" }
+                "Ancestry_Dwarf" { "modules/draw-steel-macros/icons/ancestry/dwarf.png" }
+                "Ancestry_Hakaan" { "modules/draw-steel-macros/icons/ancestry/hakaan.png" }
+                "Ancestry_HighElf" { "modules/draw-steel-macros/icons/ancestry/high-elf.png" }
+                "Ancestry_Human" { "modules/draw-steel-macros/icons/ancestry/human.png" }
+                "Ancestry_Memonek" { "modules/draw-steel-macros/icons/ancestry/memonek.png" }
+                "Ancestry_Orc" { "modules/draw-steel-macros/icons/ancestry/orc.png" }
+                "Ancestry_Polder" { "modules/draw-steel-macros/icons/ancestry/polder.png" }
+                "Ancestry_Revenant" { "modules/draw-steel-macros/icons/ancestry/revenant.png" }
+                "Ancestry_TimeRaider" { "modules/draw-steel-macros/icons/ancestry/time-raider.png" }
+                "Ancestry_WodeElf" { "modules/draw-steel-macros/icons/ancestry/wode-elf.png" }
                 "Class_Censor" { "icons/magic/holy/barrier-shield-winged-blue.webp" }
                 "Class_Conduit" { "icons/magic/holy/prayer-hands-glowing-yellow.webp" }
                 "Class_Elementalist" { "icons/magic/nature/beam-hand-leaves-green.webp" }

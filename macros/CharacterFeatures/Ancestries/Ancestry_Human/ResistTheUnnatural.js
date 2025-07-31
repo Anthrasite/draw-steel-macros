@@ -1,6 +1,6 @@
 //@id=fX8m9UIvPdH0F5pJ
 //@name=Resist the Unnatural
-//@img=modules/draw-steel-playtest-macros/icons/ancestry/human.png
+//@img=modules/draw-steel-macros/icons/ancestry/human.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Resist the Unnatural",

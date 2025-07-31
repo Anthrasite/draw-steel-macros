@@ -1,6 +1,6 @@
 //@id=aHEu6z3JjOi9foDI
 //@name=Grounded
-//@img=modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png
+//@img=modules/draw-steel-macros/icons/ancestry/dwarf.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Grounded",

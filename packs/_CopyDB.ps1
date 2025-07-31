@@ -1,4 +1,4 @@
-$foundryVTTInstall = "$env:LOCALAPPDATA\FoundryVTT\Data\modules\draw-steel-playtest-macros"
+$foundryVTTInstall = "$env:LOCALAPPDATA\FoundryVTT\Data\modules\draw-steel-macros"
 Remove-Item "$foundryVTTInstall\packs\*" -Recurse -Force
 Get-ChildItem $PSScriptRoot -Filter *.db | ForEach-Object {
   Copy-Item $_ -Destination "$foundryVTTInstall\packs"

@@ -1,6 +1,6 @@
 //@id=WDpI5hHrRcfvEP4G
 //@name=Stone Singer
-//@img=modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png
+//@img=modules/draw-steel-macros/icons/ancestry/dwarf.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Stone Singer",

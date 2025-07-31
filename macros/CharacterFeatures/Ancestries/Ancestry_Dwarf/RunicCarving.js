@@ -1,6 +1,6 @@
 //@id=wRAKbtBqkEW6JgM0
 //@name=Runic Carving
-//@img=modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png
+//@img=modules/draw-steel-macros/icons/ancestry/dwarf.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Runic Carving",

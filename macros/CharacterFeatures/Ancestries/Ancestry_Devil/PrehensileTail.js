@@ -1,6 +1,6 @@
 //@id=4r6bamXnC1L9VBUp
 //@name=Prehensile Tail
-//@img=modules/draw-steel-playtest-macros/icons/ancestry/devil.png
+//@img=modules/draw-steel-macros/icons/ancestry/devil.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Prehensile Tail",

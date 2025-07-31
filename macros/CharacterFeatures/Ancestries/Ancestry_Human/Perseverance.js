@@ -1,6 +1,6 @@
 //@id=sxAWSXDln8QkNLvj
 //@name=Perseverance
-//@img=modules/draw-steel-playtest-macros/icons/ancestry/human.png
+//@img=modules/draw-steel-macros/icons/ancestry/human.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Perseverance",
