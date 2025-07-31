@@ -1,6 +1,6 @@
 //@id=wRAKbtBqkEW6JgM0
 //@name=Runic Carving
-//@img=icons/magic/earth/strike-fist-stone.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Runic Carving",

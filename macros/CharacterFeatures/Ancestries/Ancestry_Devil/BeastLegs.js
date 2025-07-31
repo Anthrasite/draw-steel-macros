@@ -1,6 +1,6 @@
 //@id=zh5wkPJB9Y3uN1E0
 //@name=Beast Legs
-//@img=icons/creatures/unholy/demon-female-succubus-orange.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/devil.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Beast Legs",

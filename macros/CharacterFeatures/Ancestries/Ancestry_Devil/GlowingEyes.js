@@ -1,6 +1,6 @@
 //@id=IuVmX3wfo2srbP9D
 //@name=Glowing Eyes
-//@img=icons/creatures/unholy/demon-female-succubus-orange.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/devil.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Glowing Eyes",

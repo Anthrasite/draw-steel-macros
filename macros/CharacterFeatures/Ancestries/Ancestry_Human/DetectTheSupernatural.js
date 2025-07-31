@@ -1,6 +1,6 @@
 //@id=opxciTtfDub27wqC
 //@name=Detect the Supernatural
-//@img=icons/environment/people/commoner.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/human.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Detect the Supernatural",

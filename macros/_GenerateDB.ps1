@@ -26,12 +26,27 @@ Get-ChildItem $PSScriptRoot -Directory -Recurse | ForEach-Object {
             { $imgPath = $imgMatches[0].Matches[0].Groups[1].Value }
         else {
             $imgPath = switch ($dirName) {
-                "Ancestry_Devil" { "icons/creatures/unholy/demon-female-succubus-orange.webp" }
-                "Ancestry_Dwarf" { "icons/magic/earth/strike-fist-stone.webp" }
-                "Ancestry_Human" { "icons/environment/people/commoner.webp" }
+                "Ancestry_Devil" { "modules/draw-steel-playtest-macros/icons/ancestry/devil.png" }
+                "Ancestry_DragonKnight" { "modules/draw-steel-playtest-macros/icons/ancestry/dragon-knight.png" }
+                "Ancestry_Dwarf" { "modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png" }
+                "Ancestry_Hakaan" { "modules/draw-steel-playtest-macros/icons/ancestry/hakaan.png" }
+                "Ancestry_HighElf" { "modules/draw-steel-playtest-macros/icons/ancestry/high-elf.png" }
+                "Ancestry_Human" { "modules/draw-steel-playtest-macros/icons/ancestry/human.png" }
+                "Ancestry_Memonek" { "modules/draw-steel-playtest-macros/icons/ancestry/memonek.png" }
+                "Ancestry_Orc" { "modules/draw-steel-playtest-macros/icons/ancestry/orc.png" }
+                "Ancestry_Polder" { "modules/draw-steel-playtest-macros/icons/ancestry/polder.png" }
+                "Ancestry_Revenant" { "modules/draw-steel-playtest-macros/icons/ancestry/revenant.png" }
+                "Ancestry_TimeRaider" { "modules/draw-steel-playtest-macros/icons/ancestry/time-raider.png" }
+                "Ancestry_WodeElf" { "modules/draw-steel-playtest-macros/icons/ancestry/wode-elf.png" }
                 "Class_Censor" { "icons/magic/holy/barrier-shield-winged-blue.webp" }
+                "Class_Conduit" { "icons/magic/holy/prayer-hands-glowing-yellow.webp" }
                 "Class_Elementalist" { "icons/magic/nature/beam-hand-leaves-green.webp" }
+                "Class_Fury" { "icons/skills/melee/strike-axe-red.webp" }
+                "Class_Null" { "icons/skills/melee/unarmed-punch-fist.webp" }
                 "Class_Shadow" { "icons/magic/unholy/silhouette-robe-evil-power.webp" }
+                "Class_Tactician" { "icons/weapons/swords/sword-hilt-steel-green.webp" }
+                "Class_Talent" { "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp" }
+                "Class_Troubadour" { "icons/tools/instruments/lute-gold-brown.webp" }
                 "Complications" { "icons/magic/control/debuff-chains-shackles-movement-blue.webp" }
                 "Kits" { "icons/equipment/shield/buckler-boss-iron-wood-brown.webp" }
                 "Perks" { "icons/magic/light/hand-sparks-glow-yellow.webp" }

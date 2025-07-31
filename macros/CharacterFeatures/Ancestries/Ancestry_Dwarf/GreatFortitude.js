@@ -1,6 +1,6 @@
 //@id=ijD9F3el5KZxyY4f
 //@name=Great Fortitude
-//@img=icons/magic/earth/strike-fist-stone.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Great Fortitude",

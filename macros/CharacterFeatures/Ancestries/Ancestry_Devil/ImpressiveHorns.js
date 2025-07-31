@@ -1,6 +1,6 @@
 //@id=lUe3RWPbNIFo5iSZ
 //@name=Impressive Horns
-//@img=icons/creatures/unholy/demon-female-succubus-orange.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/devil.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Impressive Horns",

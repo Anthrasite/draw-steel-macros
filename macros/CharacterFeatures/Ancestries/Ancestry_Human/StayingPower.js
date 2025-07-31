@@ -1,6 +1,6 @@
 //@id=WgVqK132pAhlfE7M
 //@name=Staying Power
-//@img=icons/environment/people/commoner.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/human.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Staying Power",

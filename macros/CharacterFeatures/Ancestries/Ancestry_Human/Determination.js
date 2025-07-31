@@ -1,6 +1,6 @@
 //@id=3CE6N1QyaXcGhnUS
 //@name=Determination
-//@img=icons/environment/people/commoner.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/human.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Determination",

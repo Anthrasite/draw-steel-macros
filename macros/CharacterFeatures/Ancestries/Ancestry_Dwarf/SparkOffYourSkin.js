@@ -1,6 +1,6 @@
 //@id=eLiOJjsUGMXclkpS
 //@name=Spark Off Your Skin
-//@img=icons/magic/earth/strike-fist-stone.webp
+//@img=modules/draw-steel-playtest-macros/icons/ancestry/dwarf.png
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Spark Off Your Skin",
