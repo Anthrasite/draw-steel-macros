@@ -14,7 +14,7 @@ try {
     defaultValue = await game.macros.getName("GetHighestCharacteristic").execute({ activeActor, powerRollStat });
   }
   else
-    defaultValue = 2;
+    defaultValue = await game.macros.getName("GetHighestCharacteristic").execute({ activeActor });
 
   // Show the modifier dialog
   modifier = await game.macros.getName(`ShowSimpleInputDialog`).execute({ label: `Modifier`, defaultValue });
