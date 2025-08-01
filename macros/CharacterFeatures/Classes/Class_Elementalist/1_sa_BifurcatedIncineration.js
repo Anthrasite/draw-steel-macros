@@ -5,7 +5,7 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Bifurcated Incineration",
   flavorText: "Two jets of flame lance out at your command.",
-  type: "Main Action",
+  type: "Main action",
   keywords: "Fire, Magic, Ranged, Strike",
   distance: "Ranged 10",
   target: "Two creatures or objects",

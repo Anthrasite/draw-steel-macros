@@ -6,7 +6,7 @@ await game.macros.getName("ShareAbility").execute({
   name: "Back Blasphemer!",
   flavorText: "You channel power through your weapon to repel foes.",
   keywords: "Area, Magic, Melee, Weapon",
-  type: "Main Action",
+  type: "Main action",
   distance: "2 cube within 1",
   target: "Each enemy in the area",
   powerRollStat: "Presence",

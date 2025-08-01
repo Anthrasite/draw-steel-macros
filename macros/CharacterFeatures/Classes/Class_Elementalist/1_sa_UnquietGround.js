@@ -5,7 +5,7 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Unquiet Ground",
   flavorText: "A sudden storm of detritus assaults your foes and leaves them struggling to move.",
-  type: "Main Action",
+  type: "Main action",
   keywords: "Area, Earth, Magic, Ranged",
   distance: "2 cube within 10",
   target: "Each enemy in the area",

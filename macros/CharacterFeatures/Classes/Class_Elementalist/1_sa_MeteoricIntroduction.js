@@ -5,7 +5,7 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Meteoric Introduction",
   flavorText: "You give your enemy a gentle tap—like an asteroid impact.",
-  type: "Main Action",
+  type: "Main action",
   keywords: "Earth, Magic, Melee, Strike",
   distance: "Melee 1",
   target: "One creature or object",

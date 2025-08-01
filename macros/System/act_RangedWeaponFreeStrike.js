@@ -5,7 +5,7 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Ranged Weapon Free Strike",
   keywords: "Ranged, Strike, Weapon",
-  type: "Action",
+  type: "Main action",
   distance: "Ranged 5",
   target: "One creature or object",
   powerRollStat: "Might or Agility",

@@ -12,7 +12,7 @@ await game.macros.getName("ShareAbility").execute({
   type: "Maneuver",
   distance: "3 burst",
   target: "Each undead enemy in the area",
-  effect: `Each target takes holy damage equal to your ${extraDamageStat} score (your choice). Additionally, each target who has P < strong is frightened (save ends).`,
+  effect: `Each target takes holy damage equal to your ${extraDamageStat} score (your choice). Additionally, each target who has P < STRONG is frightened (save ends).`,
   beforeRollFunc: async function() {
     const holyDamage = Math.max(0, await game.macros.getName(`GetHighestCharacteristic`).execute({ activeActor: actor, powerRollStat: extraDamageStat }));
     const roll = await new Roll(holyDamage.toString()).evaluate();

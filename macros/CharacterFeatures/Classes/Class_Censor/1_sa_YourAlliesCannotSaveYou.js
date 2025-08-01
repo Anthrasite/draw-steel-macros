@@ -6,7 +6,7 @@ await game.macros.getName("ShareAbility").execute({
   name: "Your Allies Cannot Save You!",
   flavorText: "Your magic strike turns your foe’s guilt into a burst of holy power.",
   keywords: "Melee, Strike, Weapon",
-  type: "Main Action",
+  type: "Main action",
   distance: "Melee 1",
   target: "One creature or object",
   powerRollStat: "Might",

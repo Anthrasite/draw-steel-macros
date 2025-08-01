@@ -6,7 +6,7 @@ await game.macros.getName("ShareAbility").execute({
   name: "Every Step … Death!",
   flavorText: "You show your foe a glimpse of their fate after death.",
   keywords: "Magic, Ranged, Strike",
-  type: "Main Action",
+  type: "Main action",
   distance: "Ranged 10",
   target: "One creature",
   powerRollStat: "Presence",

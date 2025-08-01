@@ -5,7 +5,7 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Remember Growth and Sun and Rain",
   flavorText: "You stir any wood’s memory and learn what it has seen.",
-  type: "Main Action",
+  type: "Main action",
   keywords: "Green, Magic, Melee",
   distance: "Melee 1",
   target: "One mundane wooden object",

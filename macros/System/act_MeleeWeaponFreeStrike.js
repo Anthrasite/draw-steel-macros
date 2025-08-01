@@ -5,7 +5,7 @@ await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Melee Weapon Free Strike",
   keywords: "Charge, Melee, Strike, Weapon",
-  type: "Action",
+  type: "Main action",
   distance: "Melee 1",
   target: "One creature or object",
   powerRollStat: "Might or Agility",

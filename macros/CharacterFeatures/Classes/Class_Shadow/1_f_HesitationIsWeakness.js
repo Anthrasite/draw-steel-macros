@@ -7,7 +7,7 @@ await game.macros.getName("ShareAbility").execute({
   flavorText: "Keep up the attack. Never give them a moment's grace.",
   resourceCost: 1,
   keywords: "—",
-  type: "Free Triggered",
+  type: "Free triggered",
   distance: "Self",
   target: "Self",
   trigger: "Another hero ends their turn. That hero can’t have used this ability to start their turn.",

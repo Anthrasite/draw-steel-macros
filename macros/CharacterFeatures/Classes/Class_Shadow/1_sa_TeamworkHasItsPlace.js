@@ -6,7 +6,7 @@ await game.macros.getName("ShareAbility").execute({
   name: "Teamwork Has Its Place",
   flavorText: "You attack an enemy as an ally exposes their weakness.",
   keywords: "Melee, Ranged, Strike, Weapon",
-  type: "Main Action",
+  type: "Main action",
   distance: "Melee 1 or ranged 5",
   target: "One creature or object",
   powerRollStat: "Agility",

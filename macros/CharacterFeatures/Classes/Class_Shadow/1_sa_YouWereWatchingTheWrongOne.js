@@ -6,7 +6,7 @@ await game.macros.getName("ShareAbility").execute({
   name: "You Were Watching the Wrong One",
   flavorText: "They can’t watch both of you at once.",
   keywords: "Melee, Strike, Weapon",
-  type: "Main Action",
+  type: "Main action",
   distance: "Melee 1",
   target: "One creature",
   powerRollStat: "Agility",

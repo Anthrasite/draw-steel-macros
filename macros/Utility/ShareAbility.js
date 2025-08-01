@@ -56,10 +56,10 @@ try {
   const canUse = showUseButton && (typeof(resourceCost) === `undefined` || resource.value >= resourceCost);
 
   // Calculate the colour for the ability type
-  const actionColor = type === `Action` || type === `Main Action` ? `rgb(166, 28, 0)`
+  const actionColor = type === `Main action` ? `rgb(166, 28, 0)`
     : type === `Maneuver` ? `rgb(61, 133, 198)`
     : type === `Triggered` ? `rgb(56, 118, 29)`
-    : type === `Free Triggered` ? `rgb(191, 144, 0)`
+    : type === `Free triggered` ? `rgb(191, 144, 0)`
     : `black`;
 
   // Define function for highlighting any potencies in power roll results
