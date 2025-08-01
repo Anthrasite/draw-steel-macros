@@ -202,8 +202,11 @@ try {
             content: `<p>Is this the first surge used this round?</p>`,
             defaultYes: false
           });
-          if (firstSurge)
-            await game.macros.getName(`UpdateAttribute`).execute({ activeActor, attributeName: `resource`, value: 1, isDelta: true });
+          if (firstSurge) {
+            const level = (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `level` })).value;
+            const resourceGain = level >= 10 ? 3 : level >= 4 ? 2 : 1;
+            await game.macros.getName(`UpdateAttribute`).execute({ activeActor, attributeName: `resource`, value: resourceGain, isDelta: true });
+          }
         }
 
         if (damageSurges > 0) {
