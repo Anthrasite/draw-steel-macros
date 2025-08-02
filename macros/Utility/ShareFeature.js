@@ -14,6 +14,11 @@ try {
   // Calculate values for showing the "Use" button
   const buttonId = await game.macros.getName(`GetUUID`).execute();
 
+  // Define function for highlighting any potencies in ability descriptions
+  function highlightPotency(description) {
+    return description.replaceAll(/([MAIRP]\s+<\s+[A-Za-z0-9]+)/g, `<span style="color: white; background-color: black; padding: 0px 3px; border-radius: 3px; white-space: nowrap;">$1</span>`);
+  }
+
   // Show the ability in the chat
   await ChatMessage.create({
     user: game.user._id,
@@ -21,7 +26,7 @@ try {
     flags: { "core.canPopout": true },
     content:
       `<h2 style="border-color: black; border-width: 2px;">${name} <span style="font-size: 80%; color: gray;"> [${source}]</span></h2>
-      <p>${description}${description.includes(`</p>`) ? `` : `</p>`}
+      <p>${highlightPotency(description)}${description.includes(`</p>`) ? `` : `</p>`}
       ${(onUseFunc ? `<button id="${buttonId}">Use</button>` : ``)}`
   });
 
