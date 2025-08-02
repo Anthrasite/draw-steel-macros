@@ -62,9 +62,10 @@ try {
     : type === `Free triggered` ? `rgb(191, 144, 0)`
     : `black`;
 
-  // Define function for highlighting any potencies in power roll results
-  function highlightPotencyFunc(tierEffect) {
-    return tierEffect.replaceAll(/([A-Z]\s+<\s+[A-Z0-9]+)/gi, `<span style="color: red">$1</span>`);
+  // Define function for highlighting any potencies or characteristics in power roll results
+  function highlightPotencyAndCharacteristic(tierEffect) {
+    return tierEffect.replaceAll(/([MAIRP]\s+<\s+[A-Za-z0-9]+)/g, `<span style="color: white; background-color: black; padding: 0px 3px; border-radius: 3px; white-space: nowrap;">$1</span>`)
+      .replaceAll(/(\s)([MAIRP])([\s,])/g, `$1<span style="color: white; background-color: black; padding: 0px 2px; border-radius: 2px;">$2</span>$3`);
   }
 
   function includeClosingPIfNotClosed(text) {
@@ -103,11 +104,28 @@ try {
       ${(trigger ? `<p><b>Trigger:</b> ${trigger}</p>` : ``)}
       ${(powerRollStat ? `
         <p style="font-weight: bold;">Power Roll + ${powerRollStat}:</p>
-        <ul>
-          <li><b>&lt;11:</b> ${highlightPotencyFunc(tier1Effect)}</li>
-          <li><b>12-16:</b> ${highlightPotencyFunc(tier2Effect)}</li>
-          <li><b>17+:</b> ${highlightPotencyFunc(tier3Effect)}</li>
-        </ul>
+        <table style="border: 0; background: rgba(0, 0, 0, 0);">
+          <tbody>
+            <tr style="background-color: rgba(0, 0, 0, 0);">
+              <td style="white-space: nowrap; text-align: center; padding: 0;">
+                <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>≤11</b></div>
+              </td>
+              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightPotencyAndCharacteristic(tier1Effect)}</td>
+            </tr>
+            <tr style="background-color: rgba(0, 0, 0, 0);">
+              <td style="white-space: nowrap; text-align: center; padding: 0; margin-right: 20px;">
+                <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>12-16</b></div>
+              </td>
+              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightPotencyAndCharacteristic(tier2Effect)}</td>
+            </tr>
+            <tr style="background-color: rgba(0, 0, 0, 0);">
+              <td style="white-space: nowrap; text-align: center; padding: 0;">
+                <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>17+</b></div>
+              </td>
+              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightPotencyAndCharacteristic(tier3Effect)}</td>
+            </tr>
+          </tbody>
+        </table>
       ` : ``)}
       ${(effect ? `<p><b>Effect:</b> ${includeClosingPIfNotClosed(effect)}` : ``)}
       ${(persistentCost ? `<p><b>Persistent ${persistentCost}:</b> ${includeClosingPIfNotClosed(persistentEffect)}` : ``)}
