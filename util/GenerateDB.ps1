@@ -1,7 +1,7 @@
 $packsJson = @()
 $macroIds = @()
 
-Get-ChildItem $PSScriptRoot -Directory -Recurse | ForEach-Object {
+Get-ChildItem $PSScriptRoot\..\macros -Directory -Recurse | ForEach-Object {
     $dirPath = $_
     $dirName = Split-Path $_ -Leaf
     $dbFileContents = ""
