@@ -74,7 +74,7 @@
       "packs": [
         "Consumables",
         "Trinkets",
-        "LeveledTreasure"
+        "Leveled_Treasure"
       ]
     }
   ],
@@ -159,21 +159,21 @@
     },
     {
       "path": "packs\\Consumables_items.db",
+      "type": "Item",
       "label": "Consumables",
-      "name": "Consumables",
-      "type": "Item"
+      "name": "Consumables"
     },
     {
       "path": "packs\\Trinkets_items.db",
+      "type": "Item",
       "label": "Trinkets",
-      "name": "Trinkets",
-      "type": "Item"
+      "name": "Trinkets"
     },
     {
       "path": "packs\\Leveled_Treasure_items.db",
+      "type": "Item",
       "label": "Leveled Treasure",
-      "name": "LeveledTreasure",
-      "type": "Item"
+      "name": "Leveled_Treasure"
     }
   ],
   "url": "https://github.com/Anthrasite/draw-steel-macros",
