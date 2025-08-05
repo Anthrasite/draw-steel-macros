@@ -76,6 +76,14 @@
         "Trinkets",
         "Leveled_Treasure"
       ]
+    },
+    {
+      "name": "Draw Steel - Journals",
+      "sorting": "a",
+      "color": "#2F4F4F",
+      "packs": [
+        "Conditions"
+      ]
     }
   ],
   "packs": [
@@ -174,6 +182,12 @@
       "type": "Item",
       "label": "Leveled Treasure",
       "name": "Leveled_Treasure"
+    },
+    {
+      "path": "packs\\Conditions_journal.db",
+      "type": "JournalEntry",
+      "label": "Conditions",
+      "name": "Conditions"
     }
   ],
   "url": "https://github.com/Anthrasite/draw-steel-macros",
