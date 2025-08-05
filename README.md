@@ -7,7 +7,7 @@ A Foundry VTT module containing several compendiums of macros that can be used f
 General macros for managing health, recoveries, resource, surges, persistent effects, etc. during combat have also been implemented (most of which are found in the **Combat** compendium).
 
 Note that these macros only include a subset of the complete Draw Steel ruleset:
-- **Ancestries:** Devil, Dwarf, Human
+- **Ancestries:** Devil, Dragon Knight, Dwarf, Hakaan, Human, Orc
 - **Classes:** Paragon Creation Censor (level 1-4), Green Elementalist (level 1-4), Harlequin Mask Shadow (level 1-4)
 - **Kits:** All
 - **Perks:** All

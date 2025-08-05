@@ -48,9 +48,12 @@
               "sorting": "a",
               "color": "#2F4F4F",
               "packs": [
+                "Ancestry_DragonKnight",
                 "Ancestry_Devil",
                 "Ancestry_Dwarf",
-                "Ancestry_Human"
+                "Ancestry_Human",
+                "Ancestry_Hakaan",
+                "Ancestry_Orc"
               ]
             },
             {
@@ -89,81 +92,99 @@
   "packs": [
     {
       "path": "packs\\Combat_macros.db",
+      "type": "Macro",
       "label": "Combat",
-      "name": "Combat",
-      "type": "Macro"
+      "name": "Combat"
     },
     {
       "path": "packs\\System_macros.db",
+      "type": "Macro",
       "label": "System",
-      "name": "System",
-      "type": "Macro"
+      "name": "System"
     },
     {
       "path": "packs\\Utility_macros.db",
+      "type": "Macro",
       "label": "Utility",
-      "name": "Utility",
-      "type": "Macro"
+      "name": "Utility"
     },
     {
       "path": "packs\\Complications_macros.db",
+      "type": "Macro",
       "label": "Complications",
-      "name": "Complications",
-      "type": "Macro"
+      "name": "Complications"
     },
     {
       "path": "packs\\Kits_macros.db",
+      "type": "Macro",
       "label": "Kits",
-      "name": "Kits",
-      "type": "Macro"
+      "name": "Kits"
     },
     {
       "path": "packs\\Perks_macros.db",
+      "type": "Macro",
       "label": "Perks",
-      "name": "Perks",
-      "type": "Macro"
+      "name": "Perks"
     },
     {
       "path": "packs\\Titles_macros.db",
+      "type": "Macro",
       "label": "Titles",
-      "name": "Titles",
-      "type": "Macro"
+      "name": "Titles"
     },
     {
       "path": "packs\\Ancestry_Devil_macros.db",
+      "type": "Macro",
       "label": "Ancestry - Devil",
-      "name": "Ancestry_Devil",
-      "type": "Macro"
+      "name": "Ancestry_Devil"
+    },
+    {
+      "path": "packs\\Ancestry_DragonKnight_macros.db",
+      "type": "Macro",
+      "label": "Ancestry - Dragon Knight",
+      "name": "Ancestry_DragonKnight"
     },
     {
       "path": "packs\\Ancestry_Dwarf_macros.db",
+      "type": "Macro",
       "label": "Ancestry - Dwarf",
-      "name": "Ancestry_Dwarf",
-      "type": "Macro"
+      "name": "Ancestry_Dwarf"
+    },
+    {
+      "path": "packs\\Ancestry_Hakaan_macros.db",
+      "type": "Macro",
+      "label": "Ancestry - Hakaan",
+      "name": "Ancestry_Hakaan"
     },
     {
       "path": "packs\\Ancestry_Human_macros.db",
+      "type": "Macro",
       "label": "Ancestry - Human",
-      "name": "Ancestry_Human",
-      "type": "Macro"
+      "name": "Ancestry_Human"
+    },
+    {
+      "path": "packs\\Ancestry_Orc_macros.db",
+      "type": "Macro",
+      "label": "Ancestry - Orc",
+      "name": "Ancestry_Orc"
     },
     {
       "path": "packs\\Class_Censor_macros.db",
+      "type": "Macro",
       "label": "Class - Censor",
-      "name": "Class_Censor",
-      "type": "Macro"
+      "name": "Class_Censor"
     },
     {
       "path": "packs\\Class_Elementalist_macros.db",
+      "type": "Macro",
       "label": "Class - Elementalist",
-      "name": "Class_Elementalist",
-      "type": "Macro"
+      "name": "Class_Elementalist"
     },
     {
       "path": "packs\\Class_Shadow_macros.db",
+      "type": "Macro",
       "label": "Class - Shadow",
-      "name": "Class_Shadow",
-      "type": "Macro"
+      "name": "Class_Shadow"
     },
     {
       "path": "packs\\Consumables_items.db",
@@ -172,16 +193,16 @@
       "name": "Consumables"
     },
     {
+      "path": "packs\\Leveled_Treasure_items.db",
+      "type": "Item",
+      "label": "Leveled - Treasure",
+      "name": "Leveled_Treasure"
+    },
+    {
       "path": "packs\\Trinkets_items.db",
       "type": "Item",
       "label": "Trinkets",
       "name": "Trinkets"
-    },
-    {
-      "path": "packs\\Leveled_Treasure_items.db",
-      "type": "Item",
-      "label": "Leveled Treasure",
-      "name": "Leveled_Treasure"
     },
     {
       "path": "packs\\Conditions_journal.db",
