@@ -11,7 +11,7 @@ Note that these macros only include a subset of the complete Draw Steel ruleset:
 - **Classes:** Paragon Creation Censor (level 1-4), Green Elementalist (level 1-4), Harlequin Mask Shadow (level 1-4)
 - **Kits:** All
 - **Perks:** All
-- **Complications:** Getting Too Old for This, Indebted, Shattered Legacy
+- **Complications:** Curse of Immortality, Hawk Rider, Getting Too Old for This, Indebted, Shattered Legacy, Stripped of Rank
 - **Consumables:** 1st Echelon
 - **Trinkets:** 1st Echelon
 - **Leveled Treasure:** All
