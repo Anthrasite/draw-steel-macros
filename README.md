@@ -8,7 +8,7 @@ General macros for managing health, recoveries, resource, surges, persistent eff
 
 Note that these macros only include a subset of the complete Draw Steel ruleset:
 - **Ancestries:** Devil, Dragon Knight, Dwarf, Hakaan, Human, Orc
-- **Classes:** Paragon Creation Censor (level 1-4), Green Elementalist (level 1-4), Harlequin Mask Shadow (level 1-4)
+- **Classes:** Paragon Creation Censor (level 1-4), Green Elementalist (level 1-4), Harlequin Mask Shadow (level 1-4), Null (level 1)
 - **Kits:** All
 - **Perks:** All
 - **Complications:** Curse of Immortality, Hawk Rider, Getting Too Old for This, Indebted, Shattered Legacy, Stripped of Rank
@@ -34,20 +34,18 @@ Once they are imported, you should see them in the Macro Directory (which can be
 To use the macros, each actor will need to be configured with the following attributes which are expected by the macros, and the health and power should be updated to include the stamina and recoveries, respectively. If you try to use the macros without doing this, you will get errors indicating which which attributes are missing or misconfigured.
 
     class [String]
-    implementEnhancement [Number] - Optional
-    level [Number]
-    persistentCost [String]
     resource [Number] - The label must be set to the name of the resource as well
     surges [Number]
-    tempHealth [Number]
+    level [Number]
     victories [Number]
-    weaponEnhancement [Number] - Optional
+    tempHealth [Number]
     characteristics [Number group]
     - agility [Number]
     - intuition [Number]
     - might [Number]
     - presence [Number]
     - reason [Number]
+    persistentCost [String]
     kitMeleeDamage [Number group] - Optional
     - tier1 [Number]
     - tier2 [Number]
@@ -56,6 +54,10 @@ To use the macros, each actor will need to be configured with the following attr
     - tier1 [Number]
     - tier2 [Number]
     - tier3 [Number]
+    weaponEnhancement [Number] - Optional
+    implementEnhancement [Number] - Optional
+    magicBonusDamage [Number] - Optional
+    psionicBonusDamage [Number] - Optional
 
 Once you've finished setting up the actor, it should look something like the following:
 

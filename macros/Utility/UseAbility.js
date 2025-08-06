@@ -112,6 +112,24 @@ try {
       const rangedKitDamage = canAddKitDamage(false) ? await getKitDamage(false) : 0;
       const kitDamage = Math.max(meleeKitDamage, rangedKitDamage);
 
+      // Calculate the damage from any bonus damage to magic abilities (prayers and enhancments)
+      function canAddMagicBonusDamage() {
+        return keywords.toLowerCase().includes(`magic`);
+      }
+      async function getMagicBonusDamage() {
+        return (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `magicBonusDamage` }))?.value ?? 0
+      }
+      const magicDamageBonus = canAddMagicBonusDamage() ? await getMagicBonusDamage() : 0;
+
+      // Calculate the damage from any bonus damage to psionic abilities (augmentations)
+      function canAddPsionicBonusDamage() {
+        return keywords.toLowerCase().includes(`psionic`);
+      }
+      async function getPsionicBonusDamage() {
+        return (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `psionicBonusDamage` }))?.value ?? 0
+      }
+      const psionicDamageBonus = canAddPsionicBonusDamage() ? await getPsionicBonusDamage() : 0;
+
       let extraDamage = undefined;
       if (getExtraDamageFunc)
         extraDamage = await getExtraDamageFunc(rollResult);
@@ -126,6 +144,10 @@ try {
         damageRollString += ` + ` + enhancementDamage + `[enh]`;
       if (kitDamage)
         damageRollString += ` + ` + kitDamage + `[kit]`;
+      if (magicDamageBonus)
+        damageRollString += ` + ` + magicDamageBonus + `[bon]`;
+      if (psionicDamageBonus)
+        damageRollString += ` + ` + psionicDamageBonus + `[bon]`;
       if (extraDamage)
         damageRollString += extraDamage;
 
@@ -217,7 +239,7 @@ try {
           await game.macros.getName(`ShareRoll`).execute({
             activeActor,
             roll: surgeRoll,
-            flavor: `Extra damage`
+            flavor: `Surge damage`
           });
         }
 

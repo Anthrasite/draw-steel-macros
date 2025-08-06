@@ -63,6 +63,7 @@
               "packs": [
                 "Class_Censor",
                 "Class_Elementalist",
+                "Class_Null",
                 "Class_Shadow"
               ]
             }
@@ -179,6 +180,12 @@
       "type": "Macro",
       "label": "Class - Elementalist",
       "name": "Class_Elementalist"
+    },
+    {
+      "path": "packs\\Class_Null_macros.db",
+      "type": "Macro",
+      "label": "Class - Null",
+      "name": "Class_Null"
     },
     {
       "path": "packs\\Class_Shadow_macros.db",
