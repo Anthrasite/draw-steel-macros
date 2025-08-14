@@ -110,19 +110,19 @@ try {
         <table style="border: 0; background: rgba(0, 0, 0, 0);">
           <tbody>
             <tr style="background-color: rgba(0, 0, 0, 0);">
-              <td style="white-space: nowrap; text-align: center; padding: 0;">
+              <td style="white-space: nowrap; text-align: center; padding: 4px 0 0 0; vertical-align: top;">
                 <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>≤11</b></div>
               </td>
               <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightCharacteristic(highlightPotency(tier1Effect))}</td>
             </tr>
             <tr style="background-color: rgba(0, 0, 0, 0);">
-              <td style="white-space: nowrap; text-align: center; padding: 0; margin-right: 20px;">
+              <td style="white-space: nowrap; text-align: center; padding: 4px 0 0 0; vertical-align: top; margin-right: 20px;">
                 <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>12-16</b></div>
               </td>
               <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightCharacteristic(highlightPotency(tier2Effect))}</td>
             </tr>
             <tr style="background-color: rgba(0, 0, 0, 0);">
-              <td style="white-space: nowrap; text-align: center; padding: 0;">
+              <td style="white-space: nowrap; text-align: center; padding: 4px 0 0 0; vertical-align: top;">
                 <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>17+</b></div>
               </td>
               <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightCharacteristic(highlightPotency(tier3Effect))}</td>
@@ -132,7 +132,7 @@ try {
       ` : ``)}
       ${(effect ? `<p><b>Effect:</b> ${includeClosingPIfNotClosed(highlightPotency(effect))}` : ``)}
       ${(persistentCost ? `<p><b>Persistent ${persistentCost}:</b> ${includeClosingPIfNotClosed(persistentEffect)}` : ``)}
-      ${(extraResourceCost ? `<p><b>Spend ${extraResourceCost} ${resource.label}:</b> ${includeClosingPIfNotClosed(extraResourceEffect)}` : ``)}
+      ${(extraResourceCost ? `<p><b>Spend ${extraResourceCost} ${resource.label}:</b> ${includeClosingPIfNotClosed(highlightPotency(extraResourceEffect))}` : ``)}
       ${(showUseButton ? `<button id="${buttonId}">${(canUse ? `Use` : `Not enough ${resource.label}`)}</button>` : ``)}`
   });
 

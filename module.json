@@ -64,7 +64,8 @@
                 "Class_Censor",
                 "Class_Elementalist",
                 "Class_Null",
-                "Class_Shadow"
+                "Class_Shadow",
+                "Class_Tactician"
               ]
             }
           ]
@@ -192,6 +193,12 @@
       "type": "Macro",
       "label": "Class - Shadow",
       "name": "Class_Shadow"
+    },
+    {
+      "path": "packs\\Class_Tactician_macros.db",
+      "type": "Macro",
+      "label": "Class - Tactician",
+      "name": "Class_Tactician"
     },
     {
       "path": "packs\\Consumables_items.db",
