@@ -62,6 +62,7 @@
               "color": "#2F4F4F",
               "packs": [
                 "Class_Censor",
+                "Class_Conduit",
                 "Class_Elementalist",
                 "Class_Null",
                 "Class_Shadow",
@@ -175,6 +176,12 @@
       "type": "Macro",
       "label": "Class - Censor",
       "name": "Class_Censor"
+    },
+    {
+      "path": "packs\\Class_Conduit_macros.db",
+      "type": "Macro",
+      "label": "Class - Conduit",
+      "name": "Class_Conduit"
     },
     {
       "path": "packs\\Class_Elementalist_macros.db",

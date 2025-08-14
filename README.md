@@ -8,7 +8,7 @@ General macros for managing health, recoveries, resource, surges, persistent eff
 
 Note that these macros only include a subset of the complete Draw Steel ruleset:
 - **Ancestries:** Devil, Dragon Knight, Dwarf, Hakaan, Human, Orc
-- **Classes:** Paragon Creation Censor (level 1-4), Green Elementalist (level 1-4), Harlequin Mask Shadow (level 1-4), Null (level 1), Tactician (level 1)
+- **Classes:** Paragon Creation Censor (level 1-4), Green Elementalist (level 1-4), Harlequin Mask Shadow (level 1-4), Null (level 1), Conduit (level 1), Tactician (level 1)
 - **Kits:** All
 - **Perks:** All
 - **Complications:** Curse of Immortality, Hawk Rider, Getting Too Old for This, Indebted, Shattered Legacy, Stripped of Rank
