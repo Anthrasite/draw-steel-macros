@@ -216,7 +216,7 @@
     {
       "path": "packs\\Leveled_Treasure_items.db",
       "type": "Item",
-      "label": "Leveled - Treasure",
+      "label": "Leveled Treasure",
       "name": "Leveled_Treasure"
     },
     {
