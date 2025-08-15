@@ -17,7 +17,7 @@
       }
     }]
   },
-  "version": "3.1.0",
+  "version": "3.1.1",
   "compatibility": {
     "verified": "12"
   },
@@ -218,7 +218,7 @@
   ],
   "url": "https://github.com/Anthrasite/draw-steel-macros",
   "manifest": "https://raw.githubusercontent.com/Anthrasite/draw-steel-macros/master/module.json",
-  "download": "https://github.com/Anthrasite/draw-steel-macros/archive/refs/tags/v3.1.0.zip",
+  "download": "https://github.com/Anthrasite/draw-steel-macros/archive/refs/tags/v3.1.1.zip",
   "license": "https://raw.githubusercontent.com/Anthrasite/draw-steel-macros/master/LICENSE",
   "readme": "https://raw.githubusercontent.com/Anthrasite/draw-steel-macros/master/README.md",
   "changelog": "https://github.com/Anthrasite/draw-steel-macros/releases"
