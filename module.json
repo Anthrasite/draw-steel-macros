@@ -35,47 +35,31 @@
         {
           "name": "Character Features",
           "sorting": "m",
-          "color": "#2F4F4F",
+          "color": "#2E3E4F",
           "packs": [
+            "Ancestry_Devil",
+            "Ancestry_DragonKnight",
+            "Ancestry_Dwarf",
+            "Ancestry_Hakaan",
+            "Ancestry_Human",
+            "Ancestry_Orc",
+            "Class_Censor",
+            "Class_Conduit",
+            "Class_Elementalist",
+            "Class_Null",
+            "Class_Shadow",
+            "Class_Tactician",
             "Kits",
             "Perks",
             "Complications",
             "Titles"
-          ],
-          "folders": [
-            {
-              "name": "Ancestory",
-              "sorting": "a",
-              "color": "#2F4F4F",
-              "packs": [
-                "Ancestry_DragonKnight",
-                "Ancestry_Devil",
-                "Ancestry_Dwarf",
-                "Ancestry_Human",
-                "Ancestry_Hakaan",
-                "Ancestry_Orc"
-              ]
-            },
-            {
-              "name": "Class",
-              "sorting": "a",
-              "color": "#2F4F4F",
-              "packs": [
-                "Class_Censor",
-                "Class_Conduit",
-                "Class_Elementalist",
-                "Class_Null",
-                "Class_Shadow",
-                "Class_Tactician"
-              ]
-            }
           ]
         }
       ]
     },
     {
       "name": "Draw Steel - Items",
-      "sorting": "a",
+      "sorting": "m",
       "color": "#2F4F4F",
       "packs": [
         "Consumables",
@@ -85,7 +69,7 @@
     },
     {
       "name": "Draw Steel - Journals",
-      "sorting": "a",
+      "sorting": "m",
       "color": "#2F4F4F",
       "packs": [
         "Conditions"
@@ -94,142 +78,142 @@
   ],
   "packs": [
     {
-      "path": "packs\\Combat_macros.db",
+      "name": "Combat",
       "type": "Macro",
       "label": "Combat",
-      "name": "Combat"
+      "path": "packs\\Combat_macros.db"
     },
     {
-      "path": "packs\\System_macros.db",
+      "name": "System",
       "type": "Macro",
       "label": "System",
-      "name": "System"
+      "path": "packs\\System_macros.db"
     },
     {
-      "path": "packs\\Utility_macros.db",
+      "name": "Utility",
       "type": "Macro",
       "label": "Utility",
-      "name": "Utility"
+      "path": "packs\\Utility_macros.db"
     },
     {
-      "path": "packs\\Complications_macros.db",
+      "name": "Complications",
       "type": "Macro",
       "label": "Complications",
-      "name": "Complications"
+      "path": "packs\\Complications_macros.db"
     },
     {
-      "path": "packs\\Kits_macros.db",
+      "name": "Kits",
       "type": "Macro",
       "label": "Kits",
-      "name": "Kits"
+      "path": "packs\\Kits_macros.db"
     },
     {
-      "path": "packs\\Perks_macros.db",
+      "name": "Perks",
       "type": "Macro",
       "label": "Perks",
-      "name": "Perks"
+      "path": "packs\\Perks_macros.db"
     },
     {
-      "path": "packs\\Titles_macros.db",
+      "name": "Titles",
       "type": "Macro",
       "label": "Titles",
-      "name": "Titles"
+      "path": "packs\\Titles_macros.db"
     },
     {
-      "path": "packs\\Ancestry_Devil_macros.db",
+      "name": "Ancestry_Devil",
       "type": "Macro",
       "label": "Ancestry - Devil",
-      "name": "Ancestry_Devil"
+      "path": "packs\\Ancestry_Devil_macros.db"
     },
     {
-      "path": "packs\\Ancestry_DragonKnight_macros.db",
+      "name": "Ancestry_DragonKnight",
       "type": "Macro",
       "label": "Ancestry - Dragon Knight",
-      "name": "Ancestry_DragonKnight"
+      "path": "packs\\Ancestry_DragonKnight_macros.db"
     },
     {
-      "path": "packs\\Ancestry_Dwarf_macros.db",
+      "name": "Ancestry_Dwarf",
       "type": "Macro",
       "label": "Ancestry - Dwarf",
-      "name": "Ancestry_Dwarf"
+      "path": "packs\\Ancestry_Dwarf_macros.db"
     },
     {
-      "path": "packs\\Ancestry_Hakaan_macros.db",
+      "name": "Ancestry_Hakaan",
       "type": "Macro",
       "label": "Ancestry - Hakaan",
-      "name": "Ancestry_Hakaan"
+      "path": "packs\\Ancestry_Hakaan_macros.db"
     },
     {
-      "path": "packs\\Ancestry_Human_macros.db",
+      "name": "Ancestry_Human",
       "type": "Macro",
       "label": "Ancestry - Human",
-      "name": "Ancestry_Human"
+      "path": "packs\\Ancestry_Human_macros.db"
     },
     {
-      "path": "packs\\Ancestry_Orc_macros.db",
+      "name": "Ancestry_Orc",
       "type": "Macro",
       "label": "Ancestry - Orc",
-      "name": "Ancestry_Orc"
+      "path": "packs\\Ancestry_Orc_macros.db"
     },
     {
-      "path": "packs\\Class_Censor_macros.db",
+      "name": "Class_Censor",
       "type": "Macro",
       "label": "Class - Censor",
-      "name": "Class_Censor"
+      "path": "packs\\Class_Censor_macros.db"
     },
     {
-      "path": "packs\\Class_Conduit_macros.db",
+      "name": "Class_Conduit",
       "type": "Macro",
       "label": "Class - Conduit",
-      "name": "Class_Conduit"
+      "path": "packs\\Class_Conduit_macros.db"
     },
     {
-      "path": "packs\\Class_Elementalist_macros.db",
+      "name": "Class_Elementalist",
       "type": "Macro",
       "label": "Class - Elementalist",
-      "name": "Class_Elementalist"
+      "path": "packs\\Class_Elementalist_macros.db"
     },
     {
-      "path": "packs\\Class_Null_macros.db",
+      "name": "Class_Null",
       "type": "Macro",
       "label": "Class - Null",
-      "name": "Class_Null"
+      "path": "packs\\Class_Null_macros.db"
     },
     {
-      "path": "packs\\Class_Shadow_macros.db",
+      "name": "Class_Shadow",
       "type": "Macro",
       "label": "Class - Shadow",
-      "name": "Class_Shadow"
+      "path": "packs\\Class_Shadow_macros.db"
     },
     {
-      "path": "packs\\Class_Tactician_macros.db",
+      "name": "Class_Tactician",
       "type": "Macro",
       "label": "Class - Tactician",
-      "name": "Class_Tactician"
+      "path": "packs\\Class_Tactician_macros.db"
     },
     {
-      "path": "packs\\Consumables_items.db",
+      "name": "Consumables",
       "type": "Item",
       "label": "Consumables",
-      "name": "Consumables"
+      "path": "packs\\Consumables_items.db"
     },
     {
-      "path": "packs\\Leveled_Treasure_items.db",
+      "name": "Leveled_Treasure",
       "type": "Item",
       "label": "Leveled Treasure",
-      "name": "Leveled_Treasure"
+      "path": "packs\\Leveled_Treasure_items.db"
     },
     {
-      "path": "packs\\Trinkets_items.db",
+      "name": "Trinkets",
       "type": "Item",
       "label": "Trinkets",
-      "name": "Trinkets"
+      "path": "packs\\Trinkets_items.db"
     },
     {
-      "path": "packs\\Conditions_journal.db",
+      "name": "Conditions",
       "type": "JournalEntry",
       "label": "Conditions",
-      "name": "Conditions"
+      "path": "packs\\Conditions_journal.db"
     }
   ],
   "url": "https://github.com/Anthrasite/draw-steel-macros",
