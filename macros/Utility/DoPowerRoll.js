@@ -14,7 +14,10 @@ try {
     defaultValue = await game.macros.getName("GetHighestCharacteristic").execute({ activeActor, powerRollStat });
   }
   else
-    defaultValue = await game.macros.getName("GetHighestCharacteristic").execute({ activeActor });
+    // Manually check if the "characteristics" attribute is defined, as this is one of the few macros also used by the GM
+    defaultValue = Object.hasOwn(activeActor.system.attributes, `characteristics`)
+      ? await game.macros.getName("GetHighestCharacteristic").execute({ activeActor })
+      : 2;
 
   // Show the modifier dialog
   modifier = await game.macros.getName(`ShowSimpleInputDialog`).execute({ label: `Modifier`, defaultValue });
