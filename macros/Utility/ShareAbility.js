@@ -28,6 +28,7 @@ try {
   const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const beforeRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `beforeRollFunc`, value: scope.beforeRollFunc, type: `function`, nullable: true });
   const afterRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `afterRollFunc`, value: scope.afterRollFunc, type: `function`, nullable: true });
+  const extraResourceFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceFunc`, value: scope.extraResourceFunc, type: `function`, nullable: true });
 
   // Perform additional validation
   if (name.includes(`:`) || name.includes(`;`))
@@ -155,7 +156,8 @@ try {
         tier3Effect,
         getExtraDamageFunc,
         beforeRollFunc,
-        afterRollFunc
+        afterRollFunc,
+        extraResourceFunc
       });
     });
   }

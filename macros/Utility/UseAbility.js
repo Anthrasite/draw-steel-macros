@@ -19,6 +19,7 @@ try {
   const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const beforeRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `beforeRollFunc`, value: scope.beforeRollFunc, type: `function`, nullable: true });
   const afterRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `afterRollFunc`, value: scope.afterRollFunc, type: `function`, nullable: true });
+  const extraResourceFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceFunc`, value: scope.extraResourceFunc, type: `function`, nullable: true });
 
   // Determine if the ability can actually be used
   const currResource = await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `resource` });
@@ -293,6 +294,9 @@ try {
         }) ? minExtraResourceCost : 0;
 
       totalResourceCost += extraResourceUsed;
+
+      if (extraResourceFunc)
+        await extraResourceFunc(extraResourceUsed);
     }
 
     if (totalResourceCost > 0) {
