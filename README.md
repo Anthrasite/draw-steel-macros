@@ -15,7 +15,7 @@ Note that these macros only include a subset of the complete Draw Steel ruleset:
 - **Consumables:** 1st Echelon
 - **Trinkets:** 1st Echelon
 - **Leveled Treasure:** All
-- **Titles:** Zombie Slayer
+- **Titles:** 1st Echelon
 
 ## Setup and Usage
 
