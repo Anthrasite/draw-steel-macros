@@ -11,6 +11,7 @@ try {
 
   await game.macros.getName("UpdateAttribute").execute({ activeActor, attributeName: "surges", value: 0 });
   await game.macros.getName("UpdateAttribute").execute({ activeActor, attributeName: "resource", value: 0 });
+  await game.macros.getName("UpdateAttribute").execute({ activeActor, attributeName: "tempHealth", value: 0 });
   await game.macros.getName("UpdatePersistentCost").execute({ activeActor });
 }
 catch (error) {
