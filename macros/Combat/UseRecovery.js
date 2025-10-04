@@ -15,7 +15,7 @@ try {
     if (recoveries.value <= 0)
       ui.notifications.info(`No recoveries left!`);
     else {
-      const recoveryValue = Math.floor(stamina.max / 3);
+      const recoveryValue = (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `recoveryValueOverride` }))?.value ?? Math.floor(stamina.max / 3);
       const newStamina = Math.min(stamina.value + recoveryValue, stamina.max);
 
       if (newStamina < stamina.value + recoveryValue) {
