@@ -59,6 +59,7 @@ To use the macros, each actor will need to be configured with the following attr
     magicBonusDamage [Number] - Optional
     psionicBonusDamage [Number] - Optional
     recoveryValueOverride [Number] - Optional
+    savingThrowBonus [Number] - Optional
 
 Once you've finished setting up the actor, it should look something like the following:
 
