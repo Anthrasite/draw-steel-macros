@@ -5,19 +5,19 @@ try {
   const activeActor = await game.macros.getName(`ValidateParameter`).execute({ name: `activeActor`, value: scope.activeActor, type: `object` });
   const powerRollStat = await game.macros.getName(`ValidateParameter`).execute({ name: `powerRollStat`, value: scope.powerRollStat, type: `string`, nullable: true });
   const allowedEdgeBane = await game.macros.getName(`ValidateParameter`).execute({ name: `allowedEdgeBane`, value: scope.allowedEdgeBane, type: `object`, nullable: true });
+  const forceBlessingOfFate = await game.macros.getName(`ValidateParameter`).execute({ name: `forceBlessingOfFate`, value: scope.forceBlessingOfFate, type: `boolean`, nullable: true });
+  const forceCurseOfFate = await game.macros.getName(`ValidateParameter`).execute({ name: `forceCurseOfFate`, value: scope.forceCurseOfFate, type: `boolean`, nullable: true });
 
-  // Calculate the default modifier based on the highest allowed characteristic of the power roll
-  let defaultValue = -1;
-  if (powerRollStat) {
+  // Manually check if the "characteristics" attribute is defined, as this is one of the few macros also used by the GM
+  const isPC = activeActor && Object.hasOwn(activeActor.system.attributes, `characteristics`);
+  if (isPC)
     await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
 
-    defaultValue = await game.macros.getName("GetHighestCharacteristic").execute({ activeActor, powerRollStat });
-  }
-  else
-    // Manually check if the "characteristics" attribute is defined, as this is one of the few macros also used by the GM
-    defaultValue = Object.hasOwn(activeActor.system.attributes, `characteristics`)
-      ? await game.macros.getName("GetHighestCharacteristic").execute({ activeActor })
-      : 2;
+  // Calculate the default modifier based on the highest allowed characteristic of the power roll
+  let defaultValue = 2;
+  if (isPC)
+    defaultValue = powerRollStat ? await game.macros.getName("GetHighestCharacteristic").execute({ activeActor, powerRollStat })
+      : await game.macros.getName("GetHighestCharacteristic").execute({ activeActor });
 
   // Show the modifier dialog
   modifier = await game.macros.getName(`ShowSimpleInputDialog`).execute({ label: `Modifier`, defaultValue });
@@ -88,8 +88,14 @@ try {
     : edgeBane === `b` ? `- 2`
     : ``;
 
-  const roll = await new Roll(`1d10 + 1d10 ${edgeBaneModifier} + ${modifier}`).evaluate();
-  const isCrit = roll.dice[0].total + roll.dice[1].total > 18;
+  let rollBase = `2d10`;
+  if (forceBlessingOfFate || (isPC && (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `blessingOfFate` }))?.value))
+    rollBase = `3d10k2`;
+  else if (forceCurseOfFate || (isPC && (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `curseOfFate` }))?.value))
+    rollBase = `3d10kl2`;
+
+  const roll = await new Roll(`${rollBase} ${edgeBaneModifier} + ${modifier}`).evaluate();
+  const isCrit = roll.dice[0].total > 18;
 
   let tier = roll.total < 12 ? 1
     : roll.total < 17 ? 2
@@ -99,7 +105,7 @@ try {
   if (minusTier & tier > 1)
     tier--;
 
-  if (roll.dice[0].total + roll.dice[1].total === 20) // Always get a tier 3 result on roll of 20
+  if (roll.dice[0].total === 20) // Always get a tier 3 result on roll of 20
     tier = 3;
 
   // Display the roll
