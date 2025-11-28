@@ -18,6 +18,11 @@ function validateHasOwnOfType(obj, propName, type, activeActor) {
   validateIsType(obj, propName, type, activeActor);
 }
 
+function validateIsTypeIfHasOwn(obj, propName, type, activeActor) {
+  if (Object.hasOwn(obj, propName))
+    validateIsType(obj,propName, type, activeActor);
+}
+
 function validateHasNumberWithValue(obj, propName, activeActor) {
   validateHasOwnOfType(obj, propName, `number`, activeActor, false);
   if (typeof(obj[propName].value) === `undefined`)
@@ -55,7 +60,11 @@ if (Object.hasOwn(activeActor.system.groups, `kitRangedDamage`)) {
     validateHasNumberWithValue(activeActor.system.attributes.kitRangedDamage, attr, activeActor);
 }
 
-if (Object.hasOwn(activeActor.system.attributes, `weaponEnhancement`))
-  validateIsType(activeActor.system.attributes, `weaponEnhancement`, `number`, activeActor);
-if (Object.hasOwn(activeActor.system.attributes, `implementEnhancement`))
-  validateIsType(activeActor.system.attributes, `implementEnhancement`, `number`, activeActor);
+validateIsTypeIfHasOwn(activeActor.system.attributes, `weaponEnhancement`, `number`, activeActor);
+validateIsTypeIfHasOwn(activeActor.system.attributes, `implementEnhancement`, `number`, activeActor);
+validateIsTypeIfHasOwn(activeActor.system.attributes, `magicBonusDamage`, `number`, activeActor);
+validateIsTypeIfHasOwn(activeActor.system.attributes, `psionicBonusDamage`, `number`, activeActor);
+validateIsTypeIfHasOwn(activeActor.system.attributes, `recoveryValueOverride`, `number`, activeActor);
+validateIsTypeIfHasOwn(activeActor.system.attributes, `savingThrowBonus`, `number`, activeActor);
+validateIsTypeIfHasOwn(activeActor.system.attributes, `blessingOfFate`, `boolean`, activeActor);
+validateIsTypeIfHasOwn(activeActor.system.attributes, `curseOfFate`, `boolean`, activeActor);

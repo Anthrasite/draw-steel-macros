@@ -7,6 +7,9 @@ const value = await game.macros.getName(`ValidateParameter`).execute({ name: `va
 const isDelta = (await game.macros.getName(`ValidateParameter`).execute({ name: `isDelta`, value: scope.isDelta, type: `boolean`, nullable: true })) ?? false;
 
 const attribute = await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName });
+if (!attribute)
+  return attribute;
+
 const attributePath = attributeName === `stamina` ? `health`
   : attributeName === `recoveries` ? `power`
   : attributeName === `tempStamina` ? `attributes.tempHealth`
