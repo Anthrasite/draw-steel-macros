@@ -5,7 +5,7 @@ try {
   const activeActor = actor;
   await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
 
-  const damageTaken = Number(await game.macros.getName(`ShowSimpleInputDialog`).execute({ label: `Damage taken`, allowNegative: false }));
+  const damageTaken = Number(await game.macros.getName(`ShowSimpleInputDialog`).execute({ label: `Damage taken`, allowNegative: false, defaultValue: 1 }));
 
   if (damageTaken > 0) {
     let remainingDamage = damageTaken;
