@@ -1,6 +1,6 @@
 //@id=lUe3RWPbNIFo5iSZ
 //@name=Impressive Horns
-//@img=modules/draw-steel-macros/icons/ancestry/devil.png
+//@img=icons/creatures/unholy/demon-fire-horned-mask.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Impressive Horns",

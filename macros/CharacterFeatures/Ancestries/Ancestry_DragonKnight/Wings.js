@@ -1,6 +1,6 @@
 //@id=viL3p0UaRmHYo2DE
 //@name=Wings
-//@img=modules/draw-steel-macros/icons/ancestry/dragon-knight.png
+//@img=icons/creatures/reptiles/dragon-horned-blue.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Wings",

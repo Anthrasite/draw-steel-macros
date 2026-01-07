@@ -1,6 +1,6 @@
 //@id=ERG6DIOy9spPmgbN
 //@name=Wings
-//@img=modules/draw-steel-macros/icons/ancestry/devil.png
+//@img=icons/creatures/unholy/demon-fire-horned-mask.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Wings",

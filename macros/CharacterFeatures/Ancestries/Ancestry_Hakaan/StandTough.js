@@ -1,6 +1,6 @@
 //@id=w8HKJljTi3VZFYCg
 //@name=Stand Tough
-//@img=modules/draw-steel-macros/icons/ancestry/hakaan.png
+//@img=icons/magic/earth/strike-fist-stone.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Stand Tough",

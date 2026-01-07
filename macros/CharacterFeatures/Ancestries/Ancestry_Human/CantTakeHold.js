@@ -1,6 +1,6 @@
 //@id=BZzgum3WNjxOqPt5
 //@name=Can't Take Hold
-//@img=modules/draw-steel-macros/icons/ancestry/human.png
+//@img=icons/environment/people/commoner.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Can't Take Hold",

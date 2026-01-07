@@ -1,6 +1,6 @@
 //@id=5gMrGx9WZJaNS76B
 //@name=Dragon Breath
-//@img=modules/draw-steel-macros/icons/ancestry/dragon-knight.png
+//@img=icons/creatures/reptiles/dragon-horned-blue.webp
 await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
   name: "Dragon Breath",

@@ -1,6 +1,6 @@
 //@id=p8zJvL6db9sg4wKM
 //@name=Hellsight
-//@img=modules/draw-steel-macros/icons/ancestry/devil.png
+//@img=icons/creatures/unholy/demon-fire-horned-mask.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Hellsight",

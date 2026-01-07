@@ -1,6 +1,6 @@
 //@id=feb3I8m5aWSPLJZA
 //@name=Remember Your Oath
-//@img=modules/draw-steel-macros/icons/ancestry/dragon-knight.png
+//@img=icons/creatures/reptiles/dragon-horned-blue.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Remember Your Oath",

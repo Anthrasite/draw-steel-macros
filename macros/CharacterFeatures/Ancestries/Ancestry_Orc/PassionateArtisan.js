@@ -1,6 +1,6 @@
 //@id=CdSReOkh6nP90TFG
 //@name=Passionate Artisan
-//@img=modules/draw-steel-macros/icons/ancestry/orc.png
+//@img=icons/weapons/axes/axe-double-white-red.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Passionate Artisan",

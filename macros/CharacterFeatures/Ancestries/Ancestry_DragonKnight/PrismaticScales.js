@@ -1,6 +1,6 @@
 //@id=bv5KlZGgCRYr1uFa
 //@name=Prismatic Scales
-//@img=modules/draw-steel-macros/icons/ancestry/dragon-knight.png
+//@img=icons/creatures/reptiles/dragon-horned-blue.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Prismatic Scales",

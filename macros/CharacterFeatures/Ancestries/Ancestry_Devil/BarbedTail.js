@@ -1,6 +1,6 @@
 //@id=hjZ758AbOEC2grQc
 //@name=Barbed Tail
-//@img=modules/draw-steel-macros/icons/ancestry/devil.png
+//@img=icons/creatures/unholy/demon-fire-horned-mask.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Barbed Tail",

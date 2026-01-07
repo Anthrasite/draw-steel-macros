@@ -1,6 +1,6 @@
 //@id=ijD9F3el5KZxyY4f
 //@name=Great Fortitude
-//@img=modules/draw-steel-macros/icons/ancestry/dwarf.png
+//@img=icons/environment/wilderness/cave-entrance-dwarven-hill.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Great Fortitude",

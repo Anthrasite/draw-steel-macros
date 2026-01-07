@@ -1,6 +1,6 @@
 //@id=mtDdEcLPCbWiF4R3
 //@name=Glowing Recovery
-//@img=modules/draw-steel-macros/icons/ancestry/orc.png
+//@img=icons/weapons/axes/axe-double-white-red.webp
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Glowing Recovery",
