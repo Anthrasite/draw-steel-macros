@@ -1,9 +1,9 @@
 //@id=8DiPCVBNp9mUglSv
-//@name=Shock and Awe
+//@name=Raider's Awe
 //@img=icons/equipment/shield/buckler-boss-iron-wood-brown.webp
 await game.macros.getName("ShareAbility").execute({
   activeActor: actor,
-  name: "Shock and Awe",
+  name: "Raider's Awe",
   flavorText: "You execute a brutal strike that leaves your foe reeling.",
   keywords: "Melee, Ranged, Strike, Weapon",
   isKit: true,
