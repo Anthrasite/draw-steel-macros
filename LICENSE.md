@@ -1,3 +1,9 @@
+# Game Rules
+
+This Foundry VTT module for Draw Steel macros is an independent product published under the DRAW STEEL Creator License and is not affiliated with MCDM Productions, LLC. DRAW STEEL © 2024 MCDM Productions, LLC.
+
+# Code
+
 MIT License
 
 Copyright (c) 2025 Anthrasite

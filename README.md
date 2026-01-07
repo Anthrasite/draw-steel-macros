@@ -2,6 +2,8 @@
 
 ![Foundry v12](https://img.shields.io/badge/foundry-v12-green)
 
+> This Foundry VTT module for Draw Steel macros is an independent product published under the DRAW STEEL Creator License and is not affiliated with MCDM Productions, LLC. DRAW STEEL © 2024 MCDM Productions, LLC.
+
 A Foundry VTT module containing several compendiums of macros that can be used for running a game of Draw Steel. These macros allow abilities and features to be sent to the chat with a button that automatically rolls a power roll, calculates the resulting damage, deducts the resource cost, and more.
 
 General macros for managing health, recoveries, resource, surges, persistent effects, etc. during combat have also been implemented (most of which are found in the **Combat** compendium).
