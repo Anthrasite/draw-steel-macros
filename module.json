@@ -42,8 +42,14 @@
             "Ancestry_DragonKnight",
             "Ancestry_Dwarf",
             "Ancestry_Hakaan",
+            "Ancestry_HighElf",
             "Ancestry_Human",
+            "Ancestry_Memonek",
             "Ancestry_Orc",
+            "Ancestry_Polder",
+            "Ancestry_Revenant",
+            "Ancestry_TimeRaider",
+            "Ancestry_WodeElf",
             "Class_Censor",
             "Class_Conduit",
             "Class_Elementalist",
@@ -151,16 +157,52 @@
       "path": "packs\\Ancestry_Hakaan_macros.db"
     },
     {
+      "name": "Ancestry_HighElf",
+      "type": "Macro",
+      "label": "Ancestry - High Elf",
+      "path": "packs\\Ancestry_HighElf_macros.db"
+    },
+    {
       "name": "Ancestry_Human",
       "type": "Macro",
       "label": "Ancestry - Human",
       "path": "packs\\Ancestry_Human_macros.db"
     },
     {
+      "name": "Ancestry_Memonek",
+      "type": "Macro",
+      "label": "Ancestry - Memonek",
+      "path": "packs\\Ancestry_Memonek_macros.db"
+    },
+    {
       "name": "Ancestry_Orc",
       "type": "Macro",
       "label": "Ancestry - Orc",
       "path": "packs\\Ancestry_Orc_macros.db"
+    },
+    {
+      "name": "Ancestry_Polder",
+      "type": "Macro",
+      "label": "Ancestry - Polder",
+      "path": "packs\\Ancestry_Polder_macros.db"
+    },
+    {
+      "name": "Ancestry_Revenant",
+      "type": "Macro",
+      "label": "Ancestry - Revenant",
+      "path": "packs\\Ancestry_Revenant_macros.db"
+    },
+    {
+      "name": "Ancestry_TimeRaider",
+      "type": "Macro",
+      "label": "Ancestry - Time Raider",
+      "path": "packs\\Ancestry_TimeRaider_macros.db"
+    },
+    {
+      "name": "Ancestry_WodeElf",
+      "type": "Macro",
+      "label": "Ancestry - Wode Elf",
+      "path": "packs\\Ancestry_WodeElf_macros.db"
     },
     {
       "name": "Class_Censor",
