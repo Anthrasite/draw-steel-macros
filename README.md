@@ -12,8 +12,8 @@ Note that these macros only include a subset of the complete Draw Steel ruleset:
 - **Kits:** All
 - **Perks:** All
 - **Complications:** Curse of Immortality, Hawk Rider, Getting Too Old for This, Indebted, Shattered Legacy, Stripped of Rank
-- **Consumables:** 1st Echelon
-- **Trinkets:** 1st Echelon
+- **Consumables:** All
+- **Trinkets:** All
 - **Leveled Treasure:** All
 - **Titles:** 1st Echelon
 

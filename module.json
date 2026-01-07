@@ -29,6 +29,7 @@
       "packs": [
         "System",
         "Combat",
+        "Items",
         "Utility"
       ],
       "folders": [
@@ -82,6 +83,12 @@
       "type": "Macro",
       "label": "Combat",
       "path": "packs\\Combat_macros.db"
+    },
+    {
+      "name": "Items",
+      "type": "Macro",
+      "label": "Items",
+      "path": "packs\\Items_macros.db"
     },
     {
       "name": "System",
