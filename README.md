@@ -17,7 +17,7 @@ Note that these macros only include a subset of the complete Draw Steel ruleset:
 - **Consumables:** All
 - **Trinkets:** All
 - **Leveled Treasure:** All
-- **Titles:** 1st Echelon
+- **Titles:** All
 
 ## Setup and Usage
 
