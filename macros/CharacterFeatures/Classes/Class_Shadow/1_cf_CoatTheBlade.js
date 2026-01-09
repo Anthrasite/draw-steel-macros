@@ -15,7 +15,7 @@ await game.macros.getName("ShareAbility").execute({
   beforeRollFunc: async function() {
     await game.macros.getName("UpdateAttribute").execute({ activeActor: actor, attributeName: "surges", value: 2, isDelta: true });
   },
-  extraResourceFunc: async function(extraResourceUsed) {
+  extraResourceFunc: async function(extraResourceUsed, rollResult) {
     await game.macros.getName("UpdateAttribute").execute({ activeActor: actor, attributeName: "surges", value: extraResourceUsed, isDelta: true });
   }
 });

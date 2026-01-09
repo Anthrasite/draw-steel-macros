@@ -13,7 +13,7 @@ Note that these macros only include a subset of the complete Draw Steel ruleset:
 - **Classes:** Censor (level 1-4), Elementalist (level 1-4), Shadow (level 1-4), Null (level 1-4), Conduit (level 1-4), Tactician (level 1-4)
 - **Kits:** All
 - **Perks:** All
-- **Complications:** Curse of Immortality, Hawk Rider, Getting Too Old for This, Indebted, Shattered Legacy, Stripped of Rank
+- **Complications:** All
 - **Consumables:** All
 - **Trinkets:** All
 - **Leveled Treasure:** All
