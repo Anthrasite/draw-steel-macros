@@ -14,5 +14,8 @@ await game.macros.getName("ShareAbility").execute({
   tier1Effect: "You gain 10 temporary Stamina.",
   tier2Effect: "You gain 15 temporary Stamina.",
   tier3Effect: "You gain 20 temporary Stamina.",
-  effect: "While you have temporary Stamina from this ability, you can’t be made bleeding even while dying."
+  effect: "While you have temporary Stamina from this ability, you can’t be made bleeding even while dying.",
+  afterRollFunc: async function(rollResult) {
+    await game.macros.getName(`UpdateTempStamina`).execute({ activeActor: actor, value: rollResult.tier === 3 ? 20 : rollResult.tier === 2 ? 15 : 10 });
+  }
 });

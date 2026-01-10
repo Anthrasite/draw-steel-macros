@@ -14,7 +14,7 @@ await game.macros.getName("ShareAbility").execute({
   tier2Effect: "5 damage",
   tier3Effect: "7 damage",
   effect: "You can deal damage equal to your Agility score to one creature or object adjacent to you.",
-  afterRollFunc: async function() {
+  afterRollFunc: async function(rollResult) {
     const doExtraDamage = await Dialog.confirm({
       title: `Adjacent target?`,
       content: `<p>Deal additional damage to an adjacent creature or object?</p>`,

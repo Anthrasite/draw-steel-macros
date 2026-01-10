@@ -15,7 +15,7 @@ await game.macros.getName("ShareAbility").execute({
   tier2Effect: "12 + M holy damage; P < AVERAGE, frightened (save ends)",
   tier3Effect: "15 + M holy damage; P < STRONG, frightened (save ends)",
   effect: "If the target is already frightened of you or another creature and this ability would frighten them again, they instead take psychic damage equal to twice your Presence score.",
-  afterRollFunc: async function() {
+  afterRollFunc: async function(rollResult) {
     const targetWasFrightened = await Dialog.confirm({
       title: `Target frightened?`,
       content: `<p>Was the target already frightened?</p>`,

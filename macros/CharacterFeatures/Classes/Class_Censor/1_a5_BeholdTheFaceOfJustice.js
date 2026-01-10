@@ -15,7 +15,7 @@ await game.macros.getName("ShareAbility").execute({
   tier2Effect: "5 + M holy damage; if the target has P < AVERAGE, each enemy within 2 squares of them is frightened of you (save ends)",
   tier3Effect: "8 + M holy damage; if the target has P < STRONG, each enemy within 2 squares of them is frightened of you (save ends)",
   effect: "Each enemy frightened this way is pushed up to 2 squares away from the target and takes psychic damage equal to your Presence score.",
-  afterRollFunc: async function() {
+  afterRollFunc: async function(rollResult) {
     const isEnemyFrightened = await Dialog.confirm({
       title: `Enemies frightened?`,
       content: `<p>Were any enemies frightened by you?</p>`,

@@ -250,7 +250,7 @@ try {
   }
 
   if (afterRollFunc)
-    await afterRollFunc();
+    await afterRollFunc(rollResult);
 
   // Set the persistent cost, if the ability has a persistent cost
   if (persistentCost) {
