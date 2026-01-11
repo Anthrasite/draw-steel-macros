@@ -24,7 +24,7 @@
   "packFolders": [
     {
       "name": "Draw Steel - Macros",
-      "sorting": "m",
+      "sorting": "a",
       "color": "#2F4F4F",
       "packs": [
         "System",
@@ -35,7 +35,7 @@
       "folders": [
         {
           "name": "Character Features",
-          "sorting": "m",
+          "sorting": "a",
           "color": "#2E3E4F",
           "packs": [
             "Ancestry_Devil",
@@ -53,6 +53,7 @@
             "Class_Censor",
             "Class_Conduit",
             "Class_Elementalist",
+            "Class_Fury",
             "Class_Null",
             "Class_Shadow",
             "Class_Tactician",
@@ -66,7 +67,7 @@
     },
     {
       "name": "Draw Steel - Items",
-      "sorting": "m",
+      "sorting": "a",
       "color": "#2F4F4F",
       "packs": [
         "Consumables",
@@ -76,7 +77,7 @@
     },
     {
       "name": "Draw Steel - Journals",
-      "sorting": "m",
+      "sorting": "a",
       "color": "#2F4F4F",
       "packs": [
         "Conditions"
@@ -149,6 +150,12 @@
       "type": "Macro",
       "label": "Ancestry - Dwarf",
       "path": "packs\\Ancestry_Dwarf_macros.db"
+    },
+    {
+      "name": "Class_Fury",
+      "type": "Macro",
+      "label": "Class - Fury",
+      "path": "packs\\Class_Fury_macros.db"
     },
     {
       "name": "Ancestry_Hakaan",

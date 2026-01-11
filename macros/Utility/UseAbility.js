@@ -298,7 +298,7 @@ try {
 
       totalResourceCost += extraResourceUsed;
 
-      if (extraResourceFunc)
+      if (extraResourceFunc && extraResourceUsed > 0)
         await extraResourceFunc(extraResourceUsed, rollResult);
     }
 
