@@ -175,16 +175,15 @@ try {
         p2: { label: `2 (potency)`, color: `darkblue`, disabled: true },
         d3: { label: `3 (damage)`, color: `darkred`, disabled: true }
       }
-      if (doesDamage)
+      if (doesDamage) {
         surgeButtons.d1.disabled = false;
-      if (surgeCount >= 2) {
-        if (doesDamage)
+        if (surgeCount >= 3)
+          surgeButtons.d3.disabled = false;
+        if (surgeCount >= 2)
           surgeButtons.d2.disabled = false;
-        if (hasPotency)
-          surgeButtons.p2.disabled = false;
       }
-      if (surgeCount >= 3)
-        surgeButtons.d3.disabled = false;
+      if (hasPotency && surgeCount >= 2)
+        surgeButtons.p2.disabled = false;
 
       function getSurgeButtonColor(button) {
         return button.disabled ? `var(--color-text-dark-secondary)` : button.color;
