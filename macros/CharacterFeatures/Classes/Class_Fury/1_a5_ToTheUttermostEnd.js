@@ -17,12 +17,12 @@ await game.macros.getName("ShareAbility").execute({
   extraResourceCost: "1+",
   extraResourceEffect: "While you are winded, this ability deals an extra 1d6 damage for each ferocity spent. While you are dying, it deals an extra 1d10 damage for each ferocity spent. In either case, you lose 1d6 Stamina after making this strike.",
   extraResourceFunc: async function(extraResourceUsed, rollResult) {
-    const stamina = await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `stamina` });
+    const stamina = await game.macros.getName(`GetAttribute`).execute({ activeActor: actor, attributeName: `stamina` });
 
     let damageDie = undefined;
     if (stamina.value <= 0)
       damageDie = `d10`;
-    else if (stamina.value <= Math.floro(stamina.max / 2))
+    else if (stamina.value <= Math.floor(stamina.max / 2))
       damageDie = `d6`;
 
     if (damageDie) {

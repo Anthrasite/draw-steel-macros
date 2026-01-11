@@ -20,7 +20,7 @@ await game.macros.getName("ShareAbility").execute({
     const opportunityAttacks = Number(await game.macros.getName(`ShowSimpleInputDialog`).execute({ title: `Opportunity attacks`, label: `Opportunity attacks triggered`, allowNegative: false }));
 
     if (opportunityAttacks > 0) {
-      const extraDamage = (await game.macros.getName(`GetCharacteristic`).execute({ activeActor: actor, characteristicName: "Might" })) * 2;
+      const extraDamage = (await game.macros.getName(`GetCharacteristic`).execute({ activeActor: actor, characteristicName: "Might" })) * opportunityAttacks;
       const roll = await new Roll(extraDamage.toString()).evaluate();
       await game.macros.getName(`ShareRoll`).execute({
         activeActor: actor,
