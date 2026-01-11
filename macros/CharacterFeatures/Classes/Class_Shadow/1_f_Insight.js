@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Insight",
-  description: `By observing your enemy, you learn how to use their weaknesses against them, building up a Heroic Resource called insight.</p>
+  description: `<p>By observing your enemy, you learn how to use their weaknesses against them, building up a Heroic Resource called insight.</p>
     <h3>Insight in Combat</h3>
     <p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain insight equal to your Victories. At the start of each of your turns during combat, you gain 1d3 insight.</p>
     <p>Additionally, the first time each combat round that you deal damage incorporating 1 or more surges, you gain 1 insight.</p>

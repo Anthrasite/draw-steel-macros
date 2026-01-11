@@ -19,6 +19,13 @@ try {
     return description.replaceAll(/([MAIRP]\s+<\s+[A-Za-z0-9]+)/g, `<span style="color: white; background-color: black; padding: 0px 3px; border-radius: 3px; white-space: nowrap;">$1</span>`);
   }
 
+  function formatText(text) {
+    const formattedText = highlightPotency(text);
+    if (!text.startsWith("<"))
+      return `<p>${formattedText}</p>`;
+    return formattedText;
+  }
+
   // Show the ability in the chat
   await ChatMessage.create({
     user: game.user._id,
@@ -26,7 +33,7 @@ try {
     flags: { "core.canPopout": true },
     content:
       `<h2 style="border-color: black; border-width: 2px;">${name} <span style="font-size: 80%; color: gray;"> [${source}]</span></h2>
-      <p>${highlightPotency(description)}${description.includes(`</p>`) ? `` : `</p>`}
+      ${formatText(description)}
       ${(onUseFunc ? `<button id="${buttonId}">Use</button>` : ``)}`
   });
 

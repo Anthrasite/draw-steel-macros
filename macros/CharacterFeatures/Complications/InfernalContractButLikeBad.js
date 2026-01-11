@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Infernal Contract … But, Like, Bad",
-  description: `You made a deal with a devil. Not a very good deal, because it wasn’t a very good devil. It’s too late for regrets, though, because your soul is forfeit unless you find a loophole or can convince the devil to void the deal.</p>
+  description: `<p>You made a deal with a devil. Not a very good deal, because it wasn’t a very good devil. It’s too late for regrets, though, because your soul is forfeit unless you find a loophole or can convince the devil to void the deal.</p>
     <p><b>Benefit:</b> Choose one of the following benefits:</p>
     <ul>
       <li>You earn 2 Renown.</li>

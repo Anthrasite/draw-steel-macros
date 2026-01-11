@@ -73,8 +73,31 @@ try {
     return tierEffect.replaceAll(/(\s)([MAIRP])([\s,])/g, `$1<span style="color: white; background-color: black; padding: 0px 2px; border-radius: 2px;">$2</span>$3`);
   }
 
-  function includeClosingPIfNotClosed(text) {
-    return `${text}${text.includes(`</p>`) ? `` : `</p>`}`;
+  // Define functions for processing ability text
+  function formatText(text) {
+    const formattedText = highlightPotency(text);
+    if (!text.startsWith("<"))
+      return `<p>${formattedText}</p>`;
+    return formattedText;
+  }
+
+  function formatTextWithLabel(label, text) {
+    const formattedLabel = `<b>${label}: </b>`;
+    const formattedText = highlightPotency(text);
+
+    // If the text starts with <p>, insert the label at the beginning of the <p> tag
+    if (text.startsWith("<p>"))
+      return `${formattedText.substring(0, 3)}${formattedLabel}${formattedText.substring(3)}`;
+    // If the text starts with another HTML element, add a new <p> tag containing the label before the element
+    else if (text.startsWith("<"))
+      return `<p>${formattedLabel}</p>${formattedText}`;
+    // If the text doesn't contain HTML, surround the text with a <p> tag, with the label at the beginning
+    else
+      return `<p>${formattedLabel}${formattedText}</p>`;
+  }
+
+  function formatPowerRollEffect(effect) {
+    return highlightCharacteristic(highlightPotency(effect));
   }
 
   // Show the ability in the chat
@@ -105,8 +128,8 @@ try {
         </tr>
       ` : ``)}
       </table>
-      ${(description ? `<p>${includeClosingPIfNotClosed(description)}` : ``)}
-      ${(trigger ? `<p><b>Trigger:</b> ${trigger}</p>` : ``)}
+      ${(description ? formatText(description) : ``)}
+      ${(trigger ? formatTextWithLabel(`Trigger`, trigger) : ``)}
       ${(powerRollStat ? `
         <p style="font-weight: bold;">Power Roll + ${powerRollStat}:</p>
         <table style="border: 0; background: rgba(0, 0, 0, 0);">
@@ -115,26 +138,26 @@ try {
               <td style="white-space: nowrap; text-align: center; padding: 4px 0 0 0; vertical-align: top;">
                 <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>≤11</b></div>
               </td>
-              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightCharacteristic(highlightPotency(tier1Effect))}</td>
+              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${formatPowerRollEffect(tier1Effect)}</td>
             </tr>
             <tr style="background-color: rgba(0, 0, 0, 0);">
               <td style="white-space: nowrap; text-align: center; padding: 4px 0 0 0; vertical-align: top; margin-right: 20px;">
                 <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>12-16</b></div>
               </td>
-              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightCharacteristic(highlightPotency(tier2Effect))}</td>
+              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${formatPowerRollEffect(tier2Effect)}</td>
             </tr>
             <tr style="background-color: rgba(0, 0, 0, 0);">
               <td style="white-space: nowrap; text-align: center; padding: 4px 0 0 0; vertical-align: top;">
                 <div style="padding: 0 2px; border: 1px solid black; border-radius: 4px;"><b>17+</b></div>
               </td>
-              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${highlightCharacteristic(highlightPotency(tier3Effect))}</td>
+              <td style="line-height: 1.3; padding: 4px 0 0 8px; width: 100%;">${formatPowerRollEffect(tier3Effect)}</td>
             </tr>
           </tbody>
         </table>
       ` : ``)}
-      ${(effect ? `<p><b>Effect:</b> ${includeClosingPIfNotClosed(highlightPotency(effect))}` : ``)}
-      ${(persistentCost ? `<p><b>Persistent ${persistentCost}:</b> ${includeClosingPIfNotClosed(persistentEffect)}` : ``)}
-      ${(extraResourceCost ? `<p><b>Spend ${extraResourceCost} ${resource.label}:</b> ${includeClosingPIfNotClosed(highlightPotency(extraResourceEffect))}` : ``)}
+      ${(effect ? formatTextWithLabel(`Effect`, effect) : ``)}
+      ${(persistentCost ? formatTextWithLabel(`Persistent ${persistentCost}`, persistentEffect) : ``)}
+      ${(extraResourceCost ? formatTextWithLabel(`Spend ${extraResourceCost} ${resource.label}`, extraResourceEffect) : ``)}
       ${(showUseButton ? `<button id="${buttonId}">${(canUse ? `Use` : `Not enough ${resource.label}`)}</button>` : ``)}`
   });
 

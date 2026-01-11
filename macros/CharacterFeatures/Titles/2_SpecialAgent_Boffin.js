@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Special Agent - Boffin",
-  description: `You gain a small magic spy device called a boffin. Once per encounter, you can activate one the following boffin properties as a maneuver:</p>
+  description: `<p>You gain a small magic spy device called a boffin. Once per encounter, you can activate one the following boffin properties as a maneuver:</p>
     <ul>
       <li>Make a test that uses the Disguise skill. You gain an edge on the test.</li>
       <li>One mundane lock you touch is unlocked.</li>

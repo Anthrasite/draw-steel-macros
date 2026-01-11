@@ -13,6 +13,6 @@ await game.macros.getName("ShareAbility").execute({
   tier1Effect: "No effect.",
   tier2Effect: "You can grab the target, but if you do, the target can make a melee free strike against you before they are grabbed.",
   tier3Effect: "The target is grabbed by you.",
-  effect: `You can usually target only creatures of your size or smaller. If your Might score is 2 or higher, you can target any creature with a size equal to or less than your Might score.</p>
+  effect: `<p>You can usually target only creatures of your size or smaller. If your Might score is 2 or higher, you can target any creature with a size equal to or less than your Might score.</p>
     <p>Unless otherwise indicated, a creature can grab only one creature at a time.</p>`
 });

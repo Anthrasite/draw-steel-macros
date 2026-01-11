@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Remember Your Oath",
-  description: `As a maneuver, you can recite the following oath. Until the start of your next turn, whenever you make a saving throw, you succeed on a 4 or higher.</p>
+  description: `<p>As a maneuver, you can recite the following oath. Until the start of your next turn, whenever you make a saving throw, you succeed on a 4 or higher.</p>
     <p><em>Even should the sun stop in the sky<br>
     Even should the night last a thousand years<br>
     I will stand forever<br>

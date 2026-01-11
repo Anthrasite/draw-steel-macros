@@ -10,7 +10,7 @@ await game.macros.getName("ShareAbility").execute({
   keywords: "Area, Earth, Green, Magic, Ranged",
   distance: "3 cube within 10",
   target: "Special",
-  effect: `Until the start of your next turn, the area gains the following effects:</p>
+  effect: `<p>Until the start of your next turn, the area gains the following effects:</p>
     <ul>
       <li>Once as a free maneuver at the start of your turn, you allow yourself and each ally in the area to spend any number of Recoveries.</li>
       <li>The area is difficult terrain for enemies.</li>

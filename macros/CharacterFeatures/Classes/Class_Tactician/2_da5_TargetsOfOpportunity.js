@@ -10,7 +10,7 @@ await game.macros.getName("ShareAbility").execute({
   type: "Maneuver",
   distance: "Ranged 5",
   target: "Two creatures",
-  effect: `Each target is marked by you, and you gain two surges.</p>
+  effect: `<p>Each target is marked by you, and you gain two surges.</p>
     <p><strong>Mark Benefit:</strong> Until the end of the encounter, whenever you or any ally makes a strike against a creature marked by you, you can spend 2 focus to add one additional target to the strike.</p>`,
   beforeRollFunc: async function() {
     await game.macros.getName("UpdateAttribute").execute({ activeActor: actor, attributeName: "surges", value: 2, isDelta: true });

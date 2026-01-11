@@ -14,7 +14,7 @@ await game.macros.getName("ShareAbility").execute({
   tier1Effect: "3 damage",
   tier2Effect: "5 damage",
   tier3Effect: "8 damage",
-  effect: `You conjure a size 2 rolling machine that appears in an unoccupied space within distance. The machine has 50 Stamina and immunity all to poison and psychic damage. It disappears at the end of the encounter, if its Stamina drops to 0, or if you are dying. When the machine first appears, make the following power roll once, targeting each enemy adjacent to it.</p>
+  effect: `<p>You conjure a size 2 rolling machine that appears in an unoccupied space within distance. The machine has 50 Stamina and immunity all to poison and psychic damage. It disappears at the end of the encounter, if its Stamina drops to 0, or if you are dying. When the machine first appears, make the following power roll once, targeting each enemy adjacent to it.</p>
     <p>Once on each subsequent turn, you can use a free maneuver to move the machine a number of squares up to your Intuition score then repeat the power roll.</p>`,
   getCostFunc: async function(actualResourceCost) {
     const free = await Dialog.confirm({

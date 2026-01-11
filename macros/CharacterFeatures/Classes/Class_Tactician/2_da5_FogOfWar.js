@@ -10,6 +10,6 @@ await game.macros.getName("ShareAbility").execute({
   type: "Maneuver",
   distance: "Ranged 10",
   target: "Two creatures",
-  effect: `Each target is marked by you, and must immediately make a free strike against a creature of your choice within 5 squares of them.</p>
+  effect: `<p>Each target is marked by you, and must immediately make a free strike against a creature of your choice within 5 squares of them.</p>
     <p><strong>Mark Benefit:</strong> Until the end of the encounter, whenever you or any ally makes a strike against a creature marked by you, you can spend 2 focus to force that target to make a free strike against a creature of your choice within 5 squares of them.</p>`
 });

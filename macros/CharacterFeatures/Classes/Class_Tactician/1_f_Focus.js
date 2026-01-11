@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Focus",
-  description: `The ring of steel panics others but brings order to your mind, granting you a Heroic Resource called focus.</p>
+  description: `<p>The ring of steel panics others but brings order to your mind, granting you a Heroic Resource called focus.</p>
     <h3>Focus in Combat</h3>
     <p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain focus equal to your Victories. At the start of each of your turns during combat, you gain 2 focus.</p>
     <p>Additionally, the first time each combat round that you or any ally damages a creature marked by you, you gain 1 focus. The first time in a combat round that any ally within 10 squares of you uses a heroic ability, you gain 1 focus.</p>

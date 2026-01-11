@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Noble - Noble Splendor",
-  description: `You earn 1 Renown and 1 Wealth.</p>
+  description: `<p>You earn 1 Renown and 1 Wealth.</p>
     <p>If you take this title, you might occasionally be called upon to perform duties for the person who granted your noble rank.</p>`,
   source: "Title"
 });

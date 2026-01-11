@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Hunter",
-  description: `You are hunting someone or something—perhaps a wanted criminal, a person who wronged you, or a dangerous monster or beast. You won’t rest until you face off against your quarry!</p>
+  description: `<p>You are hunting someone or something—perhaps a wanted criminal, a person who wronged you, or a dangerous monster or beast. You won’t rest until you face off against your quarry!</p>
     <p><b>Benefit:</b> Choose one skill from the following:</p>
     <ul>
       <li>Interrogate (from the interpersonal skill group)</li>

@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Monarch - Royal Wealth",
-  description: `You earn 2 Wealth.</p>
+  description: `<p>You earn 2 Wealth.</p>
     <p>If you take this title, you might be called upon to perform duties for your nation.</p>`,
   source: "Title"
 });

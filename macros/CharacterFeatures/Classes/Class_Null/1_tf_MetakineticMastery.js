@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Metakinetic Mastery",
-  description: `Whenever you use your Inertial Shield ability, you can then use the Knockback maneuver as a free triggered action.</p>
+  description: `<p>Whenever you use your Inertial Shield ability, you can then use the Knockback maneuver as a free triggered action.</p>
     <p>Additionally, as your discipline grows, your psionic potential is amplified, granting benefits from the Metakinetic Mastery table. Benefits are cumulative except where an improved benefit replaces a lesser benefit.</p>
     <table>
       <tr>

@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Monarch - Royal Majesty",
-  description: `Your choice of your Might or Presence increases by 1 (to a maximum of 6).</p>
+  description: `<p>Your choice of your Might or Presence increases by 1 (to a maximum of 6).</p>
     <p>If you take this title, you might be called upon to perform duties for your nation.</p>`,
   source: "Title"
 });

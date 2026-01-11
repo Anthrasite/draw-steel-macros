@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Monarch - Crown Jewels",
-  description: `You gain one of your nation’s treasures—a trinket of the Director’s choice.</p>
+  description: `<p>You gain one of your nation’s treasures—a trinket of the Director’s choice.</p>
     <p>If you take this title, you might be called upon to perform duties for your nation.</p>`,
   source: "Title"
 });

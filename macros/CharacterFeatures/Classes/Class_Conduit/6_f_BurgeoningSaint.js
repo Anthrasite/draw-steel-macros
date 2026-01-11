@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Burgeoning Saint",
-  description: `You are infused with the power your deity reserves for their most worthy instruments. You have the following benefits:</p>
+  description: `<p>You are infused with the power your deity reserves for their most worthy instruments. You have the following benefits:</p>
     <ul>
       <li>You gain an edge on Presence tests made to interact with other creatures.</li>
       <li>Whenever you deal damage to an enemy, you can spend a Recovery.</li>

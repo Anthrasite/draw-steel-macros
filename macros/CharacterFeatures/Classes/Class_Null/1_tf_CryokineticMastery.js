@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Cryokinetic Mastery",
-  description: `Whenever you use your Inertial Shield ability, you can then use the Grab maneuver as a free triggered action.</p>
+  description: `<p>Whenever you use your Inertial Shield ability, you can then use the Grab maneuver as a free triggered action.</p>
     <p>Additionally, as your discipline grows, you strengthen the psionic power suffusing you, granting benefits from the Cryokinetic Mastery table. Benefits are cumulative except where an improved benefit replaces a lesser benefit.</p>
     <table>
       <tr>

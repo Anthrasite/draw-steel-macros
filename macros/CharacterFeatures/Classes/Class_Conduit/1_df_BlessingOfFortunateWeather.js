@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Blessing of Fortunate Weather",
-  description: `Each time you finish a respite, you can decide the weather conditions within 100 squares. Until you finish another respite, the weather conditions you establish follow you through any mundane outdoor locations. Choose one of the following types of weather, each of which grants a benefit to you and your allies:</p>
+  description: `<p>Each time you finish a respite, you can decide the weather conditions within 100 squares. Until you finish another respite, the weather conditions you establish follow you through any mundane outdoor locations. Choose one of the following types of weather, each of which grants a benefit to you and your allies:</p>
     <p><strong>Clear:</strong> You and your allies gain an edge on tests that use the Search or Navigate skills.</p>
     <p><strong>Foggy:</strong> You and your allies gain an edge on tests that use the Hide skill.</p>
     <p><strong>Overcast:</strong> You and your allies gain an edge on tests that use the Endurance skill.</p>

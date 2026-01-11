@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "I've Read About This Place",
-  description: `Each time you enter a settlement you’ve never been to before, you can ask the Director one of the following questions:</p>
+  description: `<p>Each time you enter a settlement you’ve never been to before, you can ask the Director one of the following questions:</p>
     <ul>
       <li>Who is the most influential public figure in this settlement?</li>
       <li>Who in this settlement would be the friendliest to us right now?</li>

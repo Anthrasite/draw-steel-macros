@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Discipline",
-  description: `As your mastery of your body and tradition grows, it imbues you with a Heroic Resource called discipline.</p>
+  description: `<p>As your mastery of your body and tradition grows, it imbues you with a Heroic Resource called discipline.</p>
     <h3>Discipline in Combat</h3>
     <p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain discipline equal to your Victories. At the start of each of your turns during combat, you gain 2 discipline.</p>
     <p>Additionally, the first time each combat round that an enemy in the area of your Null Field ability (see below) uses a main action, you gain 1 discipline. The first time each combat round that the Director uses an ability that costs Malice, you gain 1 discipline.</p>

@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Chronokinetic Mastery",
-  description: `Whenever you use the Inertial Shield ability, you can use the Disengage move action as a free triggered action.</p>
+  description: `<p>Whenever you use the Inertial Shield ability, you can use the Disengage move action as a free triggered action.</p>
     <p>Additionally, as your discipline grows, your psionic mastery of your body intensifies, granting benefits from the Chronokinetic Mastery table. Benefits are cumulative except where an improved benefit replaces a lesser benefit.</p>
     <table>
       <tr>

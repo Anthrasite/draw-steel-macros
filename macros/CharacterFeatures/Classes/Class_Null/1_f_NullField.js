@@ -9,7 +9,7 @@ await game.macros.getName("ShareAbility").execute({
   type: "Maneuver",
   distance: "1 aura",
   target: "Each enemy in the area",
-  effect: `Each target reduces their potencies by 1.</p>
+  effect: `<p>Each target reduces their potencies by 1.</p>
     <p>Once as a free maneuver on each of your turns, you can spend 1 discipline and give your Null Field one of the following additional effects until the start of your next turn:</p>
     <ul>
       <li><strong>Gravitic Disruption</strong>: The first time on a turn that a target takes damage, you can slide them up to 2 squares.</li>

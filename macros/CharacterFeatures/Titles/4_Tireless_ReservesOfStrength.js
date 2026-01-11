@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Tireless - Reserves of Strength",
-  description: `Your choice of your Might or Agility increases by 1 (to a maximum of 6).</p>
+  description: `<p>Your choice of your Might or Agility increases by 1 (to a maximum of 6).</p>
     <p>Additionally, your recovery value is half your Stamina.</p>`,
   source: "Title"
 });

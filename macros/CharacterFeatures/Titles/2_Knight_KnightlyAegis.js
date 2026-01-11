@@ -4,7 +4,7 @@
 await game.macros.getName("ShareFeature").execute({
   activeActor: actor,
   name: "Knight - Knightly Aegis",
-  description: `Your Stamina maximum increases by 6.</p>
+  description: `<p>Your Stamina maximum increases by 6.</p>
     <p>If you take this title, you might occasionally be called upon to perform duties for the person who knighted you.</p>`,
   source: "Title"
 });
