@@ -16,6 +16,7 @@ try {
   const keywords = (await game.macros.getName(`ValidateParameter`).execute({ name: `keywords`, value: scope.keywords, type: `string`, nullable: true })) ?? ``;
   const isKit = (await game.macros.getName(`ValidateParameter`).execute({ name: `isKit`, value: scope.isKit, type: `boolean`, nullable: true })) ?? false;
 
+  const getCostFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getCostFunc`, value: scope.getCostFunc, type: `function`, nullable: true });
   const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const beforeRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `beforeRollFunc`, value: scope.beforeRollFunc, type: `function`, nullable: true });
   const afterRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `afterRollFunc`, value: scope.afterRollFunc, type: `function`, nullable: true });
@@ -35,6 +36,9 @@ try {
     });
     actualResourceCost = isPersistent ? 0 : resourceCost;
   }
+
+  if (getCostFunc)
+    actualResourceCost = await getCostFunc(actualResourceCost);
 
   // Handle Shadow ability cost reduction
   const className = (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `class` })).value;
