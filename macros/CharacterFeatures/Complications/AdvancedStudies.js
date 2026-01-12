@@ -1,9 +1,9 @@
 //@id=xoP7juHpy1lezs5m
 //@name=Advanced Studies
 //@img=icons/magic/control/debuff-chains-shackles-movement-blue.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Advanced Studies",
+  name: `Advanced Studies`,
   description: `<p>You somehow obtained the notebook of a brilliant but eccentric member of your class. The knowledge held within those notes should help you unlock powerful new abilities—if you can ever figure out what the notes mean.</p>
     <p><b>Benefit and Drawback:</b> As a respite activity, you can study the notebook. Make a test using your highest characteristic score:</p>
     <table style="border: 0; background: rgba(0, 0, 0, 0);">
@@ -40,5 +40,5 @@ await game.macros.getName("ShareFeature").execute({
         </tr>
       </tbody>
     </table>`,
-  source: "Complication"
+  source: `Complication`,
 });

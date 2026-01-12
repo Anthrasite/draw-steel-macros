@@ -1,9 +1,9 @@
 //@id=feb3I8m5aWSPLJZA
 //@name=Remember Your Oath
 //@img=icons/creatures/reptiles/dragon-horned-blue.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Remember Your Oath",
+  name: `Remember Your Oath`,
   description: `<p>As a maneuver, you can recite the following oath. Until the start of your next turn, whenever you make a saving throw, you succeed on a 4 or higher.</p>
     <p><em>Even should the sun stop in the sky<br>
     Even should the night last a thousand years<br>
@@ -15,5 +15,5 @@ await game.macros.getName("ShareFeature").execute({
     I will speak no lies<br>
     I will stand against all tyrants<br>
     Until the last villain dies</em></p>`,
-  source: "Ancestry"
+  source: `Ancestry`,
 });

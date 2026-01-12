@@ -11,13 +11,13 @@ try {
   // Manually check if the "characteristics" attribute is defined, as this is one of the few macros also used by the GM
   const isPC = activeActor && Object.hasOwn(activeActor.system.attributes, `characteristics`);
   if (isPC)
-    await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
+    await game.macros.getName(`ValidateActorAttributes`).execute({ activeActor });
 
   // Calculate the default modifier based on the highest allowed characteristic of the power roll
   let defaultValue = 2;
   if (isPC)
-    defaultValue = powerRollStat ? await game.macros.getName("GetHighestCharacteristic").execute({ activeActor, powerRollStat })
-      : await game.macros.getName("GetHighestCharacteristic").execute({ activeActor });
+    defaultValue = powerRollStat ? await game.macros.getName(`GetHighestCharacteristic`).execute({ activeActor, powerRollStat })
+      : await game.macros.getName(`GetHighestCharacteristic`).execute({ activeActor });
 
   // Show the modifier dialog
   modifier = await game.macros.getName(`ShowSimpleInputDialog`).execute({ label: `Modifier`, defaultValue });
@@ -121,7 +121,7 @@ try {
   return { tier: tier, edge: edgeBane };
 }
 catch (error) {
-  if (error.message !== "The Dialog was closed without a choice being made.")
+  if (error.message !== `The Dialog was closed without a choice being made.`)
     ui.notifications.error(error);
   else
     throw error;

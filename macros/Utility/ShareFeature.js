@@ -3,7 +3,7 @@
 //@img=icons/svg/dice-target.svg
 try {
   const activeActor = await game.macros.getName(`ValidateParameter`).execute({ name: `activeActor`, value: scope.activeActor, type: `object` });
-  await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
+  await game.macros.getName(`ValidateActorAttributes`).execute({ activeActor });
 
   const name = await game.macros.getName(`ValidateParameter`).execute({ name: `name`, value: scope.name, type: `string` });
   const description = await game.macros.getName(`ValidateParameter`).execute({ name: `description`, value: scope.description, type: `string` });
@@ -21,7 +21,7 @@ try {
 
   function formatText(text) {
     const formattedText = highlightPotency(text);
-    if (!text.startsWith("<"))
+    if (!text.startsWith(`<`))
       return `<p>${formattedText}</p>`;
     return formattedText;
   }

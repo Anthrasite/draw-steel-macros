@@ -1,10 +1,10 @@
 //@id=AUL4rNw0QM16EZK5
 //@name=Noble - Retinue
 //@img=icons/skills/trades/academics-merchant-scribe.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Noble - Retinue",
+  name: `Noble - Retinue`,
   description: `<p>The number of followers you can recruit increases by two.</p>
     <p>If you take this title, you might occasionally be called upon to perform duties for the person who granted your noble rank.</p>`,
-  source: "Title"
+  source: `Title`,
 });

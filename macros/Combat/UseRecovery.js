@@ -3,7 +3,7 @@
 //@img=icons/magic/life/cross-worn-green.webp
 try {
   const activeActor = actor;
-  await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
+  await game.macros.getName(`ValidateActorAttributes`).execute({ activeActor });
 
   const stamina = (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `stamina` }));
 

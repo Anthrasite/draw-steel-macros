@@ -1,18 +1,18 @@
 //@id=8DiPCVBNp9mUglSv
 //@name=Raider's Awe
 //@img=icons/equipment/shield/buckler-boss-iron-wood-brown.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Raider's Awe",
-  flavorText: "You execute a brutal strike that leaves your foe reeling.",
-  keywords: "Melee, Ranged, Strike, Weapon",
+  name: `Raider's Awe`,
+  flavorText: `You execute a brutal strike that leaves your foe reeling.`,
+  keywords: `Melee, Ranged, Strike, Weapon`,
   isKit: true,
-  type: "Main action",
-  distance: "Melee 1 or ranged 10",
-  target: "One creature",
-  powerRollStat: "Might or Agility",
-  tier1Effect: "3 + M or A damage",
-  tier2Effect: "6 + M or A damage",
-  tier3Effect: "8 + M or A damage",
-  effect: "The target takes a bane on their next power roll made before the end of their next turn."
+  type: `Main action`,
+  distance: `Melee 1 or ranged 10`,
+  target: `One creature`,
+  powerRollStat: `Might or Agility`,
+  tier1Effect: `3 + M or A damage`,
+  tier2Effect: `6 + M or A damage`,
+  tier3Effect: `8 + M or A damage`,
+  effect: `The target takes a bane on their next power roll made before the end of their next turn.`,
 });

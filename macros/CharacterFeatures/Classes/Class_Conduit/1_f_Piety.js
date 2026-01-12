@@ -1,9 +1,9 @@
 //@id=HfuEdZAhicok6rQv
 //@name=Piety
 //@img=icons/magic/holy/prayer-hands-glowing-yellow.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Piety",
+  name: `Piety`,
   description: `<p>Your deity grants you a Heroic Resource called piety, letting you heal and empower your allies, and unleash holy power upon your foes.</p>
     <h3>Piety in Combat</h3>
     <p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain piety equal to your Victories. At the start of each of your turns during combat, you gain 1d3 piety.</p>
@@ -20,5 +20,5 @@ await game.macros.getName("ShareFeature").execute({
     <h3>Domain Piety and Effects</h3>
     <p>Your choice of domains provides you with two additional ways to earn piety during combat, as triggered by specific events. You might even have a single event trigger both your piety effects. For example, the Sun domain grants piety when a nearby creature takes fire or holy damage, while the War domain grants piety when a nearby creature takes damage of 10 + your level or higher. If you have both those domains and a nearby creature takes an appropriate amount of fire damage, you gain piety from both your domains.</p>
     <p>Additionally, whenever you activate a domain effect by praying for piety, you can choose one of your domains and have that domain’s prayer effect take effect immediately.</p>`,
-  source: "Class"
+  source: `Class`,
 });

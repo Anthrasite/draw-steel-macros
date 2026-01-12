@@ -3,7 +3,7 @@
 //@img=icons/svg/dice-target.svg
 try {
   const activeActor = await game.macros.getName(`ValidateParameter`).execute({ name: `activeActor`, value: scope.activeActor, type: `object` });
-  await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
+  await game.macros.getName(`ValidateActorAttributes`).execute({ activeActor });
 
   const name = await game.macros.getName(`ValidateParameter`).execute({ name: `name`, value: scope.name, type: `string` });
   const resourceCost = await game.macros.getName(`ValidateParameter`).execute({ name: `resourceCost`, value: scope.resourceCost, type: `number`, nullable: true });
@@ -37,7 +37,7 @@ try {
     throw `Error: name cannot include ":" or ";"`;
   if (typeof(resourceCost) !== `undefined` && resourceCost === 0)
     throw `Error: resourceCost cannot be 0`;
-  if (typeof(trigger) !== `undefined` && !type.toLowerCase().includes("triggered"))
+  if (typeof(trigger) !== `undefined` && !type.toLowerCase().includes(`triggered`))
     throw `Error: trigger can only be specified for triggered actions`;
   if (typeof(powerRollStat) !== typeof(tier1Effect) || typeof(powerRollStat) !== typeof(tier2Effect) || typeof(powerRollStat) !== typeof(tier3Effect))
     throw `Error: powerRollStat, tier1Effect, tier2Effect, and tier3Effect must be specified together`;
@@ -77,7 +77,7 @@ try {
   // Define functions for processing ability text
   function formatText(text) {
     const formattedText = highlightPotency(text);
-    if (!text.startsWith("<"))
+    if (!text.startsWith(`<`))
       return `<p>${formattedText}</p>`;
     return formattedText;
   }
@@ -87,10 +87,10 @@ try {
     const formattedText = highlightPotency(text);
 
     // If the text starts with <p>, insert the label at the beginning of the <p> tag
-    if (text.startsWith("<p>"))
+    if (text.startsWith(`<p>`))
       return `${formattedText.substring(0, 3)}${formattedLabel}${formattedText.substring(3)}`;
     // If the text starts with another HTML element, add a new <p> tag containing the label before the element
-    else if (text.startsWith("<"))
+    else if (text.startsWith(`<`))
       return `<p>${formattedLabel}</p>${formattedText}`;
     // If the text doesn't contain HTML, surround the text with a <p> tag, with the label at the beginning
     else

@@ -1,14 +1,14 @@
 //@id=0VDzS9IiKp1kGYlw
 //@name=Practical Magic
 //@img=icons/magic/nature/beam-hand-leaves-green.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Practical Magic",
-  flavorText: "Your mastery of elemental power lets you customize your conjurations.",
-  keywords: "Magic",
-  type: "Maneuver",
-  distance: "Self; see below",
-  target: "Self",
+  name: `Practical Magic`,
+  flavorText: `Your mastery of elemental power lets you customize your conjurations.`,
+  keywords: `Magic`,
+  type: `Maneuver`,
+  distance: `Self; see below`,
+  target: `Self`,
   effect: `<p>Choose one of the following effects:</p>
     <ul>
       <li>You use the Knockback maneuver, but its distance becomes the range of your Hurl Element ability, and you use Reason instead of Might for the power roll.</li>

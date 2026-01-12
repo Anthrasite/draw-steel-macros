@@ -3,7 +3,7 @@
 //@img=icons/svg/dice-target.svg
 try {
   const activeActor = await game.macros.getName(`ValidateParameter`).execute({ name: `activeActor`, value: scope.activeActor, type: `object` });
-  await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
+  await game.macros.getName(`ValidateActorAttributes`).execute({ activeActor });
 
   const resourceRoll = (await game.macros.getName(`ValidateParameter`).execute({ name: `resourceRoll`, value: scope.resourceRoll, type: `string`, nullable: true })) ?? `1d3`;
 
@@ -13,10 +13,10 @@ try {
   let persistentCost = 0;
   const currPersistentCosts = await game.macros.getName(`GetPersistentCost`).execute({ activeActor });
   if (Object.keys(currPersistentCosts).length) {
-    if (resourceRoll.includes("d"))
+    if (resourceRoll.includes(`d`))
       throw `Error: Handling of persistent effects with variable resource gain is not implemented`;
 
-    const abilitiesToMaintain = await game.macros.getName("ShowPersistentCostDialog").execute({ activeActor, label: `Persistent effects to maintain`, resourceLabel: resourceAttribute.label, selectByDefault: true });
+    const abilitiesToMaintain = await game.macros.getName(`ShowPersistentCostDialog`).execute({ activeActor, label: `Persistent effects to maintain`, resourceLabel: resourceAttribute.label, selectByDefault: true });
     for (const abilityName of abilitiesToMaintain)
       persistentCost += currPersistentCosts[abilityName];
 
@@ -40,6 +40,6 @@ try {
   await game.macros.getName(`UpdateAttribute`).execute({ activeActor, attributeName: `resource`, value: roll.total });
 }
 catch (error) {
-  if (error.message !== "The Dialog was closed without a choice being made.")
+  if (error.message !== `The Dialog was closed without a choice being made.`)
     ui.notifications.error(error);
 }

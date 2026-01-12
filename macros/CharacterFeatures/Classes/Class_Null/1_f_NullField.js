@@ -1,14 +1,14 @@
 //@id=bmdUBTKqgSLR0zjW
 //@name=Null Field
 //@img=icons/skills/melee/unarmed-punch-fist.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Null Field",
-  flavorText: "You project an aura that dampens the power of your foes.",
-  keywords: "Area, Psionic",
-  type: "Maneuver",
-  distance: "1 aura",
-  target: "Each enemy in the area",
+  name: `Null Field`,
+  flavorText: `You project an aura that dampens the power of your foes.`,
+  keywords: `Area, Psionic`,
+  type: `Maneuver`,
+  distance: `1 aura`,
+  target: `Each enemy in the area`,
   effect: `<p>Each target reduces their potencies by 1.</p>
     <p>Once as a free maneuver on each of your turns, you can spend 1 discipline and give your Null Field one of the following additional effects until the start of your next turn:</p>
     <ul>

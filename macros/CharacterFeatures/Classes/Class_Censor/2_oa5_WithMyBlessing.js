@@ -1,14 +1,14 @@
 //@id=omCdfuqHNYInW913
 //@name=With My Blessing
 //@img=icons/magic/holy/barrier-shield-winged-blue.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "With My Blessing",
+  name: `With My Blessing`,
   resourceCost: 5,
-  flavorText: "A word in prayer, and the gods show the way.",
-  keywords: "Magic, Ranged",
-  type: "Main action",
-  distance: "Ranged 10",
-  target: "Self or one ally",
-  effect: "The target can use a free triggered action to use a strike signature ability or a strike heroic ability, and has a double edge on that ability. If a heroic ability is chosen, reduce its Heroic Resource cost by 3 (to a minimum cost of 0).",
+  flavorText: `A word in prayer, and the gods show the way.`,
+  keywords: `Magic, Ranged`,
+  type: `Main action`,
+  distance: `Ranged 10`,
+  target: `Self or one ally`,
+  effect: `The target can use a free triggered action to use a strike signature ability or a strike heroic ability, and has a double edge on that ability. If a heroic ability is chosen, reduce its Heroic Resource cost by 3 (to a minimum cost of 0).`,
 });

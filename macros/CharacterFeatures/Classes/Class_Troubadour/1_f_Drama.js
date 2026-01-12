@@ -1,9 +1,9 @@
 //@id=Xah2pzrE9sjfRN7w
 //@name=Drama
 //@img=icons/tools/instruments/lute-gold-brown.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Drama",
+  name: `Drama`,
   description: `<p>During battles, you are fueled by the dynamic ups, downs, and upside downs of the fray, from which you derive a Heroic Resource called drama.</p>
     <h3>Drama in Combat</h3>
     <p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain drama equal to your Victories. At the start of each of your turns during combat, you gain 1d3 drama.</p>
@@ -19,5 +19,5 @@ await game.macros.getName("ShareFeature").execute({
     <h3>Drama Outside of Combat</h3>
     <p>Though you can’t gain drama outside of combat, you can use your heroic abilities and effects that cost drama without spending it. Whenever you use an ability or effect outside of combat that costs drama, you can’t use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite.</p>
     <p>When you use an ability outside of combat that lets you spend unlimited drama on its effect, such as Artful Flourish, you can use it as if you had spent an amount of drama equal to your Victories.</p>`,
-  source: "Class"
+  source: `Class`,
 });

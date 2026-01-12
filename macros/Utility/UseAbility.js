@@ -45,7 +45,7 @@ try {
   // Handle Shadow ability cost reduction
   const className = (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `class` })).value;
   let allowedEdgeBane = undefined;
-  if (className.toLowerCase() === "shadow" && actualResourceCost && powerRollStat) {
+  if (className.toLowerCase() === `shadow` && actualResourceCost && powerRollStat) {
     const decreaseCost = await Dialog.confirm({
       title: `Edge?`,
       content: `<p>Will you have an edge on the power roll (against at least one target)?</p>`,
@@ -54,10 +54,10 @@ try {
 
     if (decreaseCost) {
       --actualResourceCost;
-      allowedEdgeBane = ['de', 'e'];
+      allowedEdgeBane = [`de`, `e`];
     }
     else
-      allowedEdgeBane = ['n', 'b', 'db'];
+      allowedEdgeBane = [`n`, `b`, `db`];
   }
 
   // Show a warning and quit early if there isn't enough resource for this ability
@@ -129,7 +129,7 @@ try {
 
       // Calculate the damage from the kit (if this isn't a kit ability)
       function canAddKitDamage(isMelee) {
-        return !isKit && keywords.toLowerCase().includes(isMelee ? "melee" : "ranged") && keywords.toLowerCase().includes("weapon");
+        return !isKit && keywords.toLowerCase().includes(isMelee ? `melee` : `ranged`) && keywords.toLowerCase().includes(`weapon`);
       }
       async function getKitDamage(isMelee) {
         return await game.macros.getName(`GetKitDamage`).execute({ activeActor, isMelee, tier: rollResult.tier });
@@ -244,7 +244,7 @@ try {
         const potencySurges = surgesUsed.startsWith(`p`) ? Number(surgesUsed.substring(1)) : 0;
 
         // Handle Shadow resource gain when using a surges for damage for the first time in a round
-        if (className.toLowerCase() === "shadow" && damageSurges > 0) {
+        if (className.toLowerCase() === `shadow` && damageSurges > 0) {
           const firstSurge = await Dialog.confirm({
             title: `First surge?`,
             content: `<p>Is this the first surge used this round?</p>`,
@@ -336,6 +336,6 @@ try {
   button.remove();
 }
 catch (error) {
-  if (error.message !== "The Dialog was closed without a choice being made.")
+  if (error.message !== `The Dialog was closed without a choice being made.`)
     ui.notifications.error(error);
 }

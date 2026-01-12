@@ -1,9 +1,9 @@
 //@id=0R43QFv9CMjKfgnN
 //@name=Cryokinetic Mastery
 //@img=icons/skills/melee/unarmed-punch-fist.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Cryokinetic Mastery",
+  name: `Cryokinetic Mastery`,
   description: `<p>As you advance in your chosen null tradition, you gain certain benefits in combat, including benefits based on the amount of discipline you have. Benefits based on how much discipline you have last until the end of your turn, even if a benefit would become unavailable to you because of the amount of discipline you spend during your turn.</p>
     <p>Whenever you use your Inertial Shield ability, you can then use the Grab maneuver as a free triggered action.</p>
     <p>Additionally, as your discipline grows, you strengthen the psionic power suffusing you, granting benefits from the Cryokinetic Mastery table. Benefits are cumulative except where an improved benefit replaces a lesser benefit.</p>
@@ -37,5 +37,5 @@ await game.macros.getName("ShareFeature").execute({
         <td>Whenever you force move a target, the forced movement distance gains a bonus equal to your Intuition score. Additionally, whenever you use a heroic ability, you gain 10 temporary Stamina.</td>
       </tr>
     </table>`,
-  source: "Class"
+  source: `Class`,
 });

@@ -1,17 +1,17 @@
 //@id=Aoa04ym7XchjtRNF
 //@name=Repent!
 //@img=icons/magic/holy/barrier-shield-winged-blue.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Repent!",
+  name: `Repent!`,
   resourceCost: 3,
-  flavorText: "You conjure memories of their sins to harry your foes.",
-  keywords: "Magic, Ranged, Strike",
-  type: "Main action",
-  distance: "Ranged 10",
-  target: "One creature",
-  powerRollStat: "Presence",
-  tier1Effect: "5 + P holy damage; I < WEAK, dazed (save ends)",
-  tier2Effect: "8 + P holy damage; I < AVERAGE, dazed (save ends)",
-  tier3Effect: "11 + P holy damage; I < STRONG, dazed (save ends)"
+  flavorText: `You conjure memories of their sins to harry your foes.`,
+  keywords: `Magic, Ranged, Strike`,
+  type: `Main action`,
+  distance: `Ranged 10`,
+  target: `One creature`,
+  powerRollStat: `Presence`,
+  tier1Effect: `5 + P holy damage; I < WEAK, dazed (save ends)`,
+  tier2Effect: `8 + P holy damage; I < AVERAGE, dazed (save ends)`,
+  tier3Effect: `11 + P holy damage; I < STRONG, dazed (save ends)`,
 });

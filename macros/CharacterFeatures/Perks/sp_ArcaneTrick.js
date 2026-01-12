@@ -1,14 +1,14 @@
 //@id=5vzNHBpcWZqsui63
 //@name=Arcane Trick
 //@img=icons/magic/light/hand-sparks-glow-yellow.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Arcane Trick",
-  flavorText: "You cast an entertaining spell that creates a minor but impressive magical effect.",
-  keywords: "Magic",
-  type: "Main action",
-  distance: "Self; see below",
-  target: "Self",
+  name: `Arcane Trick`,
+  flavorText: `You cast an entertaining spell that creates a minor but impressive magical effect.`,
+  keywords: `Magic`,
+  type: `Main action`,
+  distance: `Self; see below`,
+  target: `Self`,
   effect: `<p>Choose one of the following effects:</p>
     <ul>
       <li>You teleport a size 1S or smaller object adjacent to you into an unoccupied space adjacent to you.</li>

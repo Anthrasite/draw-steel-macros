@@ -3,7 +3,7 @@
 //@img=icons/skills/wounds/injury-triple-slash-bleed.webp
 try {
   const activeActor = actor;
-  await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
+  await game.macros.getName(`ValidateActorAttributes`).execute({ activeActor });
 
   const damageTaken = Number(await game.macros.getName(`ShowSimpleInputDialog`).execute({ label: `Damage taken`, allowNegative: false, defaultValue: 1 }));
 
@@ -23,6 +23,6 @@ try {
   }
 }
 catch (error) {
-  if (error.message !== "The Dialog was closed without a choice being made.")
+  if (error.message !== `The Dialog was closed without a choice being made.`)
     ui.notifications.error(error);
 }

@@ -1,15 +1,15 @@
 //@id=Rr07qjzYxiJVdAln
 //@name=Posthumous Retirement
 //@img=icons/magic/control/debuff-chains-shackles-movement-blue.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Posthumous Retirement",
-  flavorText: "You make your modified collar explode.",
-  keywords: "Area, Magic",
-  type: "Maneuver",
-  distance: "1 burst",
-  target: "Each enemy in the area",
-  effect: "Your loyalty collar detonates, dealing fire damage equal to 5 plus your level to each target. Once you use this ability, you can’t use it again until you spend 1 uninterrupted minute out of combat resetting the collar.",
+  name: `Posthumous Retirement`,
+  flavorText: `You make your modified collar explode.`,
+  keywords: `Area, Magic`,
+  type: `Maneuver`,
+  distance: `1 burst`,
+  target: `Each enemy in the area`,
+  effect: `Your loyalty collar detonates, dealing fire damage equal to 5 plus your level to each target. Once you use this ability, you can’t use it again until you spend 1 uninterrupted minute out of combat resetting the collar.`,
   beforeRollFunc: async function() {
     const level = (await game.macros.getName(`GetAttribute`).execute({ activeActor: actor, attributeName: `level` })).value;
 
@@ -19,5 +19,5 @@ await game.macros.getName("ShareAbility").execute({
       roll: roll,
       flavor: `Fire damage`
     });
-  }
+  },
 });

@@ -17,7 +17,7 @@ if (abilityName) {
   else
     delete persistentCosts[abilityName];
 
-  value = Object.entries(persistentCosts).map(([k,v]) => `${k}:${v}`).join(';');
+  value = Object.entries(persistentCosts).map(([k,v]) => `${k}:${v}`).join(`;`);
 }
 
 const attributeName = `persistentCost`;

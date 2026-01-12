@@ -1,17 +1,17 @@
 //@id=yAHxCaJUSpBV5Ij7
 //@name=Staggering Blow
 //@img=icons/magic/unholy/silhouette-robe-evil-power.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Staggering Blow",
-  flavorText: "There’s no recovering from this.",
+  name: `Staggering Blow`,
+  flavorText: `There’s no recovering from this.`,
   resourceCost: 7,
-  keywords: "Melee, Ranged, Strike, Weapon",
-  type: "Main action",
-  distance: "Melee 1 or ranged 5",
-  target: "One creature",
-  powerRollStat: "Agility",
-  tier1Effect: "7 + A damage; M < WEAK, slowed (save ends)",
-  tier2Effect: "11 + A damage; M < AVERAGE, prone and can’t stand (save ends)",
-  tier3Effect: "16 + A damage; M < STRONG, prone and can’t stand (save ends)"
+  keywords: `Melee, Ranged, Strike, Weapon`,
+  type: `Main action`,
+  distance: `Melee 1 or ranged 5`,
+  target: `One creature`,
+  powerRollStat: `Agility`,
+  tier1Effect: `7 + A damage; M < WEAK, slowed (save ends)`,
+  tier2Effect: `11 + A damage; M < AVERAGE, prone and can’t stand (save ends)`,
+  tier3Effect: `16 + A damage; M < STRONG, prone and can’t stand (save ends)`,
 });

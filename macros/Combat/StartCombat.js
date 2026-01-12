@@ -3,7 +3,7 @@
 //@img=icons/skills/melee/hand-grip-sword-orange.webp
 try {
   const activeActor = actor;
-  await game.macros.getName("ValidateActorAttributes").execute({ activeActor });
+  await game.macros.getName(`ValidateActorAttributes`).execute({ activeActor });
 
   const victories = (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `victories` })).value;
 

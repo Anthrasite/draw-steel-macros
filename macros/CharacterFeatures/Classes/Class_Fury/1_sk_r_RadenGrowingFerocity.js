@@ -1,9 +1,9 @@
 //@id=Iw7jWlE5gzpARD0T
 //@name=Raden Growing Ferocity
 //@img=icons/skills/melee/strike-axe-red.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Raden Growing Ferocity",
+  name: `Raden Growing Ferocity`,
   description: `<p>You gain certain benefits in combat based on the amount of ferocity you have. These benefits last until the end of your turn, even if a benefit would become unavailable to you because of the amount of ferocity you spend during your turn.</p>
     <p>As your ferocity grows, you gain benefits as noted on the Raden Growing Ferocity table. Benefits are cumulative except where an improved benefit replaces a lesser benefit.</p>
     <table>
@@ -36,5 +36,5 @@ await game.macros.getName("ShareFeature").execute({
         <td>Whenever you use a heroic ability, you gain 10 temporary Stamina. Additionally, the potency of any effects targeting you is reduced by 2 for you.</td>
       </tr>
     </table>`,
-  source: "Class"
+  source: `Class`,
 });

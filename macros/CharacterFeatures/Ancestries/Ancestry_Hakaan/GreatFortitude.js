@@ -1,9 +1,9 @@
 //@id=rGvb38Dk0PMWEdlq
 //@name=Great Fortitude
 //@img=icons/magic/earth/strike-fist-stone.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Great Fortitude",
+  name: `Great Fortitude`,
   description: `Your hearty constitution prevents you from losing strength. You can’t be made weakened.`,
-  source: "Ancestry"
+  source: `Ancestry`,
 });

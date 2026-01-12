@@ -3,15 +3,15 @@
 //@img=icons/skills/trades/academics-merchant-scribe.webp
 const extraDamageStat = `Reason, Intuition, or Presence`;
 
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Zombie Slayer - Holy Terror",
-  flavorText: "Return to your grave!",
+  name: `Zombie Slayer - Holy Terror`,
+  flavorText: `Return to your grave!`,
   resourceCost: 3,
-  keywords: "Area, Magic",
-  type: "Maneuver",
-  distance: "3 burst",
-  target: "Each undead enemy in the area",
+  keywords: `Area, Magic`,
+  type: `Maneuver`,
+  distance: `3 burst`,
+  target: `Each undead enemy in the area`,
   effect: `Each target takes holy damage equal to your ${extraDamageStat} score (your choice). Additionally, each target who has P < STRONG is frightened (save ends).`,
   beforeRollFunc: async function() {
     const holyDamage = Math.max(0, await game.macros.getName(`GetHighestCharacteristic`).execute({ activeActor: actor, powerRollStat: extraDamageStat }));
@@ -21,5 +21,5 @@ await game.macros.getName("ShareAbility").execute({
       roll,
       flavor: `Holy damage`
     });
-  }
+  },
 });

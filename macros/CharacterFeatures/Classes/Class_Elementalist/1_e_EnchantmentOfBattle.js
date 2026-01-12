@@ -1,10 +1,10 @@
 //@id=ASkmn5ZcFzPps8CI
 //@name=Enchantment of Battle
 //@img=icons/magic/nature/beam-hand-leaves-green.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Enchantment of Battle",
+  name: `Enchantment of Battle`,
   description: `<p>You can wear light armor and wield light weapons effectively, even though you don’t have a kit. While you wear light armor, you gain a +3 bonus to Stamina, and that bonus increases by 3 at 4th, 7th, and 10th levels. While you wield a light weapon, you gain a +1 damage bonus with weapon abilities, including free strikes. You can use light armor treasures and light weapon treasures.</p>
     <p>If you have a kit, you can’t take this enchantment.</p>`,
-  source: "Class"
+  source: `Class`,
 });

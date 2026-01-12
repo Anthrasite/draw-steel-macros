@@ -1,21 +1,21 @@
 //@id=9AD5EwMVa0iO4PBb
 //@name=To the Uttermost End
 //@img=icons/skills/melee/strike-axe-red.webp
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "To the Uttermost End",
+  name: `To the Uttermost End`,
   resourceCost: 5,
-  flavorText: "You gut your life force to ensure a foe’s demise.",
-  keywords: "Melee, Strike, Weapon",
-  type: "Main action",
-  distance: "Melee 1",
-  target: "One creature",
-  powerRollStat: "Might",
-  tier1Effect: "7 + M damage",
-  tier2Effect: "11 + M damage",
-  tier3Effect: "16 + M damage",
-  extraResourceCost: "1+",
-  extraResourceEffect: "While you are winded, this ability deals an extra 1d6 damage for each ferocity spent. While you are dying, it deals an extra 1d10 damage for each ferocity spent. In either case, you lose 1d6 Stamina after making this strike.",
+  flavorText: `You gut your life force to ensure a foe’s demise.`,
+  keywords: `Melee, Strike, Weapon`,
+  type: `Main action`,
+  distance: `Melee 1`,
+  target: `One creature`,
+  powerRollStat: `Might`,
+  tier1Effect: `7 + M damage`,
+  tier2Effect: `11 + M damage`,
+  tier3Effect: `16 + M damage`,
+  extraResourceCost: `1+`,
+  extraResourceEffect: `While you are winded, this ability deals an extra 1d6 damage for each ferocity spent. While you are dying, it deals an extra 1d10 damage for each ferocity spent. In either case, you lose 1d6 Stamina after making this strike.`,
   extraResourceFunc: async function(extraResourceUsed, rollResult) {
     const stamina = await game.macros.getName(`GetAttribute`).execute({ activeActor: actor, attributeName: `stamina` });
 
@@ -33,5 +33,5 @@ await game.macros.getName("ShareAbility").execute({
         flavor: `Extra damage`
       });
     }
-  }
+  },
 });

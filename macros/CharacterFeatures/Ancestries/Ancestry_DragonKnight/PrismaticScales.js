@@ -1,9 +1,9 @@
 //@id=bv5KlZGgCRYr1uFa
 //@name=Prismatic Scales
 //@img=icons/creatures/reptiles/dragon-horned-blue.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Prismatic Scales",
-  description: "Select one damage immunity granted by your Wyrmplate trait. You always have this immunity, in addition to the immunity granted by Wyrmplate.",
-  source: "Ancestry"
+  name: `Prismatic Scales`,
+  description: `Select one damage immunity granted by your Wyrmplate trait. You always have this immunity, in addition to the immunity granted by Wyrmplate.`,
+  source: `Ancestry`,
 });

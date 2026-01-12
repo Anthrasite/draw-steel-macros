@@ -1,22 +1,22 @@
 //@id=fOZknN4c3AyUqszT
 //@name=Exploding Arrow
 //@img=icons/equipment/shield/buckler-boss-iron-wood-brown.webp
-const powerRollStat = "Agility, Reason, Intuition, or Presence";
+const powerRollStat = `Agility, Reason, Intuition, or Presence`;
 
-await game.macros.getName("ShareAbility").execute({
+await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
-  name: "Exploding Arrow",
-  flavorText: "Your ammunition explodes with magical energy.",
-  keywords: "Magic, Ranged, Strike, Weapon",
+  name: `Exploding Arrow`,
+  flavorText: `Your ammunition explodes with magical energy.`,
+  keywords: `Magic, Ranged, Strike, Weapon`,
   isKit: true,
-  type: "Main action",
-  distance: "Ranged 15",
-  target: "One creature or object",
+  type: `Main action`,
+  distance: `Ranged 15`,
+  target: `One creature or object`,
   powerRollStat,
-  tier1Effect: "5 + A, R, I, or P fire damage",
-  tier2Effect: "7 + A, R, I, or P fire damage",
-  tier3Effect: "10 + A, R, I, or P fire damage",
-  effect: "One creature or object of your choice within 2 squares of the target takes fire damage equal to the characteristic score used for this ability’s power roll.",
+  tier1Effect: `5 + A, R, I, or P fire damage`,
+  tier2Effect: `7 + A, R, I, or P fire damage`,
+  tier3Effect: `10 + A, R, I, or P fire damage`,
+  effect: `One creature or object of your choice within 2 squares of the target takes fire damage equal to the characteristic score used for this ability’s power roll.`,
   afterRollFunc: async function(rollResult) {
     const isOtherTarget = await Dialog.confirm({
       title: `Other target within 2 squares?`,
@@ -33,5 +33,5 @@ await game.macros.getName("ShareAbility").execute({
         flavor: `Extra fire damage`
       });
     }
-  }
+  },
 });

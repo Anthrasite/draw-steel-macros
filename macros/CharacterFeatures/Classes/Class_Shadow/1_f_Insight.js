@@ -1,9 +1,9 @@
 //@id=KX5ScIyefUh9naNT
 //@name=Insight
 //@img=icons/magic/unholy/silhouette-robe-evil-power.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Insight",
+  name: `Insight`,
   description: `<p>By observing your enemy, you learn how to use their weaknesses against them, building up a Heroic Resource called insight.</p>
     <h3>Insight in Combat</h3>
     <p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain insight equal to your Victories. At the start of each of your turns during combat, you gain 1d3 insight.</p>
@@ -13,5 +13,5 @@ await game.macros.getName("ShareFeature").execute({
     <h3>Insight Outside of Combat</h3>
     <p>Although you can’t gain insight outside of combat, you can use your heroic abilities and effects that cost insight without spending it. Whenever you use an ability or effect outside of combat that costs insight, you can’t use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite.</p>
     <p>When you use an ability outside of combat that lets you spend unlimited insight on its effect, such as Black Ash Teleport, you can use it as if you had spent an amount of insight equal to your Victories.</p>`,
-  source: "Class"
+  source: `Class`,
 });

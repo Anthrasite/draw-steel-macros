@@ -1,9 +1,9 @@
 //@id=HRVzBOlmMid0pbeJ
 //@name=Vulken Growing Ferocity
 //@img=icons/skills/melee/strike-axe-red.webp
-await game.macros.getName("ShareFeature").execute({
+await game.macros.getName(`ShareFeature`).execute({
   activeActor: actor,
-  name: "Vulken Growing Ferocity",
+  name: `Vulken Growing Ferocity`,
   description: `<p>You gain certain benefits in combat based on the amount of ferocity you have. These benefits last until the end of your turn, even if a benefit would become unavailable to you because of the amount of ferocity you spend during your turn.</p>
     <p>As your ferocity grows, you gain benefits as noted on the Vuken Growing Ferocity table. Benefits are cumulative except where an improved benefit replaces a lesser benefit.</p>
     <table>
@@ -36,5 +36,5 @@ await game.macros.getName("ShareFeature").execute({
         <td>Whenever you use a heroic ability, you gain 10 temporary Stamina. Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to your Agility score.</td>
       </tr>
     </table>`,
-  source: "Class"
+  source: `Class`,
 });
