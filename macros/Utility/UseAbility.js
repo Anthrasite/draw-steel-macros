@@ -17,8 +17,9 @@ try {
   const isKit = (await game.macros.getName(`ValidateParameter`).execute({ name: `isKit`, value: scope.isKit, type: `boolean`, nullable: true })) ?? false;
 
   const getCostFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getCostFunc`, value: scope.getCostFunc, type: `function`, nullable: true });
-  const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const beforeRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `beforeRollFunc`, value: scope.beforeRollFunc, type: `function`, nullable: true });
+  const getDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getDamageFunc`, value: scope.getDamageFunc, type: `function`, nullable: true });
+  const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const afterRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `afterRollFunc`, value: scope.afterRollFunc, type: `function`, nullable: true });
   const extraResourceFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceFunc`, value: scope.extraResourceFunc, type: `function`, nullable: true });
 
@@ -37,6 +38,7 @@ try {
     actualResourceCost = isPersistent ? 0 : resourceCost;
   }
 
+  // Perform custom cost calculation if the function is specified
   if (getCostFunc)
     actualResourceCost = await getCostFunc(actualResourceCost);
 
@@ -58,11 +60,13 @@ try {
       allowedEdgeBane = ['n', 'b', 'db'];
   }
 
+  // Show a warning and quit early if there isn't enough resource for this ability
   if (actualResourceCost && currResource.value < actualResourceCost) {
     ui.notifications.info(`Not enough ${currResource.label}!`);
     return;
   }
 
+  // Perform custom "before roll" functionality if the function is specified
   if (beforeRollFunc)
     await beforeRollFunc();
 
@@ -74,12 +78,29 @@ try {
     // Calculate the damage of the ability
     const effect = [ tier1Effect, tier2Effect, tier3Effect ][rollResult.tier - 1];
     const matches = effect.match(/^(([0-9]+d[0-9]+)\s+\+\s+)?([0-9]+)(\s+\+\s+[MAIRPor,\s]+)?\s+((acid|cold|corruption|fire|holy|lightning|poison|psychic|sonic)\s+)?damage/);
-    const doesDamage = matches !== null;
+    const effectDoesDamage = matches !== null;
+    const doesDamage = effectDoesDamage || getDamageFunc;
+
     if (doesDamage) {
-      const diceDamage = matches[2];
-      const constDamage = matches[3];
-      const charDamageOptions = matches[4];
-      const damageType = matches[6];
+      let diceDamage = undefined;
+      let constDamage = undefined;
+      let charDamageOptions = undefined;
+      let damageType = undefined;
+
+      // Perform custom damage calculation if the function is specified
+      if (getDamageFunc) {
+        let damage = await getDamageFunc(rollResult);
+        diceDamage = damage.diceDamage;
+        constDamage = damage.constDamage;
+        charDamageOptions = damage.charDamageOptions;
+        damageType = damage.damageType;
+      }
+      else {
+        diceDamage = matches[2];
+        constDamage = matches[3];
+        charDamageOptions = matches[4];
+        damageType = matches[6];
+      }
 
       // Calculate the damage from the highest characteristic
       let charDamage = undefined;
@@ -135,6 +156,7 @@ try {
       }
       const psionicDamageBonus = canAddPsionicBonusDamage() ? await getPsionicBonusDamage() : 0;
 
+      // Perform custom extra damage calculation if the function is specified
       let extraDamage = undefined;
       if (getExtraDamageFunc)
         extraDamage = await getExtraDamageFunc(rollResult);
@@ -252,6 +274,7 @@ try {
     }
   }
 
+  // Perform custom "after roll" functionality if the function is specified
   if (afterRollFunc)
     await afterRollFunc(rollResult);
 
@@ -298,6 +321,7 @@ try {
 
       totalResourceCost += extraResourceUsed;
 
+      // Perform custom extra resource functionality if the function is specified and extra resource was used
       if (extraResourceFunc && extraResourceUsed > 0)
         await extraResourceFunc(extraResourceUsed, rollResult);
     }

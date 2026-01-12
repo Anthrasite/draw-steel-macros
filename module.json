@@ -57,6 +57,7 @@
             "Class_Null",
             "Class_Shadow",
             "Class_Tactician",
+            "Class_Troubadour",
             "Kits",
             "Perks",
             "Complications",
@@ -246,6 +247,12 @@
       "type": "Macro",
       "label": "Class - Tactician",
       "path": "packs\\Class_Tactician_macros.db"
+    },
+    {
+      "name": "Class_Troubadour",
+      "type": "Macro",
+      "label": "Class - Troubadour",
+      "path": "packs\\Class_Troubadour_macros.db"
     },
     {
       "name": "Consumables",

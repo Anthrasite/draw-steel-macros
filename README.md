@@ -10,7 +10,7 @@ General macros for managing health, recoveries, resource, surges, persistent eff
 
 Note that these macros only include a subset of the complete Draw Steel ruleset:
 - **Ancestries:** All
-- **Classes:** Censor (level 1-4), Conduit (level 1-6), Elementalist (level 1-4), Fury (level 1), Null (level 1-6), Shadow (level 1-4), Tactician (level 1-6)
+- **Classes:** Censor (level 1-4), Conduit (level 1-6), Elementalist (level 1-4), Fury (level 1), Null (level 1-6), Shadow (level 1-4), Tactician (level 1-6), Troubadour (level 1)
 - **Kits:** All
 - **Perks:** All
 - **Complications:** All

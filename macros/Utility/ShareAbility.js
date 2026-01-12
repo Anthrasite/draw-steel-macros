@@ -26,8 +26,9 @@ try {
   const persistentEffect = await game.macros.getName(`ValidateParameter`).execute({ name: `persistentEffect`, value: scope.persistentEffect, type: `string`, nullable: true });
 
   const getCostFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getCostFunc`, value: scope.getCostFunc, type: `function`, nullable: true });
-  const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const beforeRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `beforeRollFunc`, value: scope.beforeRollFunc, type: `function`, nullable: true });
+  const getDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getDamageFunc`, value: scope.getDamageFunc, type: `function`, nullable: true });
+  const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const afterRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `afterRollFunc`, value: scope.afterRollFunc, type: `function`, nullable: true });
   const extraResourceFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceFunc`, value: scope.extraResourceFunc, type: `function`, nullable: true });
 
@@ -179,8 +180,9 @@ try {
         tier2Effect,
         tier3Effect,
         getCostFunc,
-        getExtraDamageFunc,
         beforeRollFunc,
+        getDamageFunc,
+        getExtraDamageFunc,
         afterRollFunc,
         extraResourceFunc
       });
