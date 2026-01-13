@@ -5,5 +5,5 @@ await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
   name: `Search for Hidden Creatures`,
   type: `Maneuver`,
-  description: `The Search for Hidden Creatures maneuver allows a creature to attempt to locate creatures hidden from them.`
+  description: `The Search for Hidden Creatures maneuver allows a creature to attempt to locate creatures hidden from them.`,
 });

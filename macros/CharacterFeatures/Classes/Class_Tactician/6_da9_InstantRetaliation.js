@@ -15,5 +15,5 @@ await game.macros.getName(`ShareAbility`).execute({
   tier1Effect: `A < WEAK, dazed (save ends)`,
   tier2Effect: `A < AVERAGE, dazed (save ends)`,
   tier3Effect: `A < STRONG, dazed (save ends)`,
-  effect: `The target takes half the damage. You then make a power roll against the triggering creature.`
+  effect: `The target takes half the damage. You then make a power roll against the triggering creature.`,
 });

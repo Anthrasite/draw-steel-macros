@@ -14,5 +14,5 @@ await game.macros.getName(`ShareAbility`).execute({
   tier1Effect: `5 + R damage; taunted (EoT)`,
   tier2Effect: `9 + R damage; taunted (EoT)`,
   tier3Effect: `12 + R damage; taunted (EoT)`,
-  effect: `One ally adjacent to the target can spend a Recovery.`
+  effect: `One ally adjacent to the target can spend a Recovery.`,
 });

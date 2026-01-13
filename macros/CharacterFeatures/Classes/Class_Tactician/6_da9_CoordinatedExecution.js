@@ -11,5 +11,5 @@ await game.macros.getName(`ShareAbility`).execute({
   distance: `Ranged 10`,
   target: `One ally`,
   trigger: `The target uses an ability to deal rolled damage to a creature while hidden.`,
-  effect: `If the target of the triggering ability is not a leader or solo creature, they are reduced to 0 Stamina. If the target of the triggering ability is a minion, the entire squad is killed. If the target of the triggering ability is a leader or solo creature, the triggering ability’s power roll automatically obtains a tier 3 outcome.`
+  effect: `If the target of the triggering ability is not a leader or solo creature, they are reduced to 0 Stamina. If the target of the triggering ability is a minion, the entire squad is killed. If the target of the triggering ability is a leader or solo creature, the triggering ability’s power roll automatically obtains a tier 3 outcome.`,
 });

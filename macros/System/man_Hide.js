@@ -5,5 +5,5 @@ await game.macros.getName(`ShareAbility`).execute({
   activeActor: actor,
   name: `Hide`,
   type: `Maneuver`,
-  description: `Using the Hide maneuver, a creature attempts to hide from other creatures who aren’t observing them while they have cover or concealment.`
+  description: `Using the Hide maneuver, a creature attempts to hide from other creatures who aren’t observing them while they have cover or concealment.`,
 });

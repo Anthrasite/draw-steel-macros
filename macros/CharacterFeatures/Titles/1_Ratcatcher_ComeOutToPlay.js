@@ -10,5 +10,5 @@ await game.macros.getName(`ShareAbility`).execute({
   type: `Maneuver`,
   distance: `5 burst`,
   target: `Each enemy in the area hidden to you`,
-  effect: `Each target who has P < AVERAGE is taunted by you until the end of their next turn, and you know the location of each creature taunted in this way.`
+  effect: `Each target who has P < AVERAGE is taunted by you until the end of their next turn, and you know the location of each creature taunted in this way.`,
 });

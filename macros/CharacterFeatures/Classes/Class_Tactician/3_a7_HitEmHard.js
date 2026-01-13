@@ -10,5 +10,5 @@ await game.macros.getName(`ShareAbility`).execute({
   type: `Maneuver`,
   distance: `Self`,
   target: `Self`,
-  effect: `Until the end of the encounter or until you are dying, whenever you or any ally deals damage to a target marked by you, that creature gains 2 surges, which they can use immediately.`
+  effect: `Until the end of the encounter or until you are dying, whenever you or any ally deals damage to a target marked by you, that creature gains 2 surges, which they can use immediately.`,
 });

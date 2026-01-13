@@ -14,5 +14,5 @@ await game.macros.getName(`ShareAbility`).execute({
   tier1Effect: `6 + M damage; slide 1`,
   tier2Effect: `9 + M damage; slide 3`,
   tier3Effect: `13 + M damage; slide 5`,
-  effect: `If a target is force moved into another creature, they must make a free strike against that creature.`
+  effect: `If a target is force moved into another creature, they must make a free strike against that creature.`,
 });

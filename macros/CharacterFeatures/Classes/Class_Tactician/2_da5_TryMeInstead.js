@@ -14,5 +14,5 @@ await game.macros.getName(`ShareAbility`).execute({
   tier1Effect: `2 + R damage; R < WEAK, frightened (save ends)`,
   tier2Effect: `3 + R damage; R < AVERAGE, frightened (save ends)`,
   tier3Effect: `4 + R damage; R < STRONG, frightened (save ends)`,
-  effect: `You shift up to your speed directly toward an ally, ending adjacent to them, then swapping locations with that ally as long as you can fit into each other’s spaces. The ally can spend a Recovery, and you can make this weapon strike with a distance of melee 1 against a creature.`
+  effect: `You shift up to your speed directly toward an ally, ending adjacent to them, then swapping locations with that ally as long as you can fit into each other’s spaces. The ally can spend a Recovery, and you can make this weapon strike with a distance of melee 1 against a creature.`,
 });

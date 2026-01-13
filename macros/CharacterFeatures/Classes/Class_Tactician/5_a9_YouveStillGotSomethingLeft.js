@@ -10,5 +10,5 @@ await game.macros.getName(`ShareAbility`).execute({
   type: `Main action`,
   distance: `Ranged 10`,
   target: `One ally`,
-  effect: `The target uses a heroic ability with the Strike keyword as a free triggered action, and deals extra damage with that ability equal to your Reason score. The ability has its Heroic Resource cost reduced by 1 + your Reason score (minimum cost 0).`
+  effect: `The target uses a heroic ability with the Strike keyword as a free triggered action, and deals extra damage with that ability equal to your Reason score. The ability has its Heroic Resource cost reduced by 1 + your Reason score (minimum cost 0).`,
 });

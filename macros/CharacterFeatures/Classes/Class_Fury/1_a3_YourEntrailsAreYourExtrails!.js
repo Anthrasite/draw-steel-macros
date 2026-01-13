@@ -14,5 +14,5 @@ await game.macros.getName(`ShareAbility`).execute({
   tier1Effect: `3 + M damage; M < WEAK, bleeding (save ends)`,
   tier2Effect: `5 + M damage; M < AVERAGE, bleeding (save ends)`,
   tier3Effect: `8 + M damage; M < STRONG, bleeding (save ends)`,
-  effect: `While bleeding this way, the target takes damage equal to your Might score at the end of each of your turns.`
+  effect: `While bleeding this way, the target takes damage equal to your Might score at the end of each of your turns.`,
 });
