@@ -8,6 +8,7 @@ try {
   const name = await game.macros.getName(`ValidateParameter`).execute({ name: `name`, value: scope.name, type: `string` });
   const resourceCost = await game.macros.getName(`ValidateParameter`).execute({ name: `resourceCost`, value: scope.resourceCost, type: `number`, nullable: true });
   const extraResourceCost = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceCost`, value: scope.extraResourceCost, type: `string`, nullable: true });
+  const extraResourceCost2 = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceCost2`, value: scope.extraResourceCost2, type: `string`, nullable: true });
   const persistentCost = await game.macros.getName(`ValidateParameter`).execute({ name: `persistentCost`, value: scope.persistentCost, type: `number`, nullable: true });
   const powerRollStat = await game.macros.getName(`ValidateParameter`).execute({ name: `powerRollStat`, value: scope.powerRollStat, type: `string`, nullable: true });
   const tier1Effect = await game.macros.getName(`ValidateParameter`).execute({ name: `tier1Effect`, value: scope.tier1Effect, type: `string`, nullable: true });
@@ -22,12 +23,18 @@ try {
   const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const afterRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `afterRollFunc`, value: scope.afterRollFunc, type: `function`, nullable: true });
   const extraResourceFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceFunc`, value: scope.extraResourceFunc, type: `function`, nullable: true });
+  const onStrainedFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `onStrainedFunc`, value: scope.onStrainedFunc, type: `function`, nullable: true });
+
+  // Check the class to handle enable class-specific functionality
+  const className = (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `class` })).value;
+  const isShadow = className.toLowerCase() === `shadow`;
+  const isTalent = className.toLowerCase() === `talent`;
 
   // Determine if the ability can actually be used
   const currResource = await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `resource` });
   let actualResourceCost = resourceCost;
 
-  // Handle free persistent effect
+  // Handle free persistent effects
   const persistentCosts = await game.macros.getName(`GetPersistentCost`).execute({ activeActor });
   if (Object.keys(persistentCosts).length && Object.hasOwn(persistentCosts, name)) {
     const isPersistent = await Dialog.confirm({
@@ -43,9 +50,8 @@ try {
     actualResourceCost = await getCostFunc(actualResourceCost);
 
   // Handle Shadow ability cost reduction
-  const className = (await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `class` })).value;
   let allowedEdgeBane = undefined;
-  if (className.toLowerCase() === `shadow` && actualResourceCost && powerRollStat) {
+  if (isShadow && actualResourceCost && powerRollStat) {
     const decreaseCost = await Dialog.confirm({
       title: `Edge?`,
       content: `<p>Will you have an edge on the power roll (against at least one target)?</p>`,
@@ -61,7 +67,7 @@ try {
   }
 
   // Show a warning and quit early if there isn't enough resource for this ability
-  if (actualResourceCost && currResource.value < actualResourceCost) {
+  if (actualResourceCost && currResource.value < actualResourceCost && !isTalent) {
     ui.notifications.info(`Not enough ${currResource.label}!`);
     return;
   }
@@ -244,7 +250,7 @@ try {
         const potencySurges = surgesUsed.startsWith(`p`) ? Number(surgesUsed.substring(1)) : 0;
 
         // Handle Shadow resource gain when using a surges for damage for the first time in a round
-        if (className.toLowerCase() === `shadow` && damageSurges > 0) {
+        if (isShadow && damageSurges > 0) {
           const firstSurge = await Dialog.confirm({
             title: `First surge?`,
             content: `<p>Is this the first surge used this round?</p>`,
@@ -284,41 +290,50 @@ try {
   }
 
   // Subtract the resource cost, if the ability has a resource cost
-  if (actualResourceCost || extraResourceCost) {
-    let totalResourceCost = actualResourceCost ?? 0;
-
+  let totalResourceCost = actualResourceCost ?? 0;
+  if (actualResourceCost || extraResourceCost || extraResourceCost2) {
     // Determine if extra resource should be used and use it if so
-    if (extraResourceCost) {
+    if (extraResourceCost || extraResourceCost2) {
       let extraResourceUsed = 0;
 
-      const isExtraResourceCostVariable = extraResourceCost.endsWith(`+`);
-      const minExtraResourceCost = Number(isExtraResourceCostVariable ? extraResourceCost.substring(0, extraResourceCost.length - 1) : extraResourceCost);
+      async function getExtraResourceUsed(extraResourceCost) {
+        const isExtraResourceCostVariable = extraResourceCost.endsWith(`+`);
+        const minExtraResourceCost = Number(isExtraResourceCostVariable ? extraResourceCost.substring(0, extraResourceCost.length - 1) : extraResourceCost);
 
-      // If the extra resource ends with a "+", then a variable amount can be used
-      if (isExtraResourceCostVariable) {
-        if (currResource.value >= totalResourceCost + minExtraResourceCost) {
-          extraResourceUsed = Number((await game.macros.getName(`ShowSimpleInputDialog`).execute({ title: `Extra ${currResource.label}`, label: `Extra ${currResource.label} to use`, defaultValue: minExtraResourceCost, allowNegative: false, rejectClose: false })) ?? 0);
+        // If the extra resource ends with a "+", then a variable amount can be used
+        if (isExtraResourceCostVariable) {
+          let extraResourceUsed = 0;
 
-          // Ensure the minimum resource was used
-          if (extraResourceUsed > 0 && extraResourceUsed < minExtraResourceCost) {
-            extraResourceUsed = 0;
-            ui.notifications.warn(`Extra effect requires at least ${minExtraResourceCost} ${currResource.label} to be used! No extra ${currResource.label} was used.`);
+          if (currResource.value >= totalResourceCost + minExtraResourceCost || isTalent) {
+            extraResourceUsed = Number((await game.macros.getName(`ShowSimpleInputDialog`).execute({ title: `Extra ${currResource.label}`, label: `Extra ${currResource.label} to use`, defaultValue: minExtraResourceCost, allowNegative: false, rejectClose: false })) ?? 0);
+
+            // Ensure the minimum resource was used
+            if (extraResourceUsed > 0 && extraResourceUsed < minExtraResourceCost) {
+              ui.notifications.warn(`Extra effect requires at least ${minExtraResourceCost} ${currResource.label} to be used! No extra ${currResource.label} was used.`);
+              return 0;
+            }
+            // Ensure that the actor has enough resource
+            else if (currResource.value < totalResourceCost + extraResourceUsed && !isTalent) {
+              ui.notifications.warn(`Not enough ${currResource.label}! ${extraResourceUsed} ${currResource.label} will be used instead.`);
+              return currResource.value - totalResourceCost;
+            }
           }
-          // Ensure that the actor has enough resource
-          else if (currResource.value < totalResourceCost + extraResourceUsed) {
-            extraResourceUsed = currResource.value - totalResourceCost;
-            ui.notifications.warn(`Not enough ${currResource.label}! ${extraResourceUsed} ${currResource.label} will be used instead.`);
-          }
+
+          return extraResourceUsed;
         }
+        // If the extra resource doesn't end with a "+", then exactly that amount must be used
+        else if (currResource.value >= totalResourceCost + minExtraResourceCost || isTalent)
+          return await Dialog.confirm({
+            title: `Extra ${currResource.label}`,
+            content: `<p>Use extra ${minExtraResourceCost} ${currResource.label}?</p>`,
+            defaultYes: false
+          }) ? minExtraResourceCost : 0;
       }
-      // If the extra resource doesn't end with a "+", then exactly that amount must be used
-      else if (currResource.value >= totalResourceCost + minExtraResourceCost)
-        extraResourceUsed = await Dialog.confirm({
-          title: `Extra ${currResource.label}`,
-          content: `<p>Use extra ${minExtraResourceCost} ${currResource.label}?</p>`,
-          defaultYes: false
-        }) ? minExtraResourceCost : 0;
 
+      if (extraResourceCost)
+        extraResourceUsed += await getExtraResourceUsed(extraResourceCost);
+      if (extraResourceCost2)
+        extraResourceUsed += await getExtraResourceUsed(extraResourceCost2);
       totalResourceCost += extraResourceUsed;
 
       // Perform custom extra resource functionality if the function is specified and extra resource was used
@@ -330,6 +345,10 @@ try {
       await game.macros.getName(`UpdateAttribute`).execute({ activeActor, attributeName: `resource`, value: -totalResourceCost, isDelta: true });
     }
   }
+
+  // Perform custom strained functionality if the function is specified and resource is negative
+  if (onStrainedFunc && currResource.value - totalResourceCost < 0)
+    await onStrainedFunc(rollResult);
 
   // Disable this event and delete the button
   button.off(`click`);

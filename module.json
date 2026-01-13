@@ -57,6 +57,7 @@
             "Class_Null",
             "Class_Shadow",
             "Class_Tactician",
+            "Class_Talent",
             "Class_Troubadour",
             "Kits",
             "Perks",
@@ -247,6 +248,12 @@
       "type": "Macro",
       "label": "Class - Tactician",
       "path": "packs\\Class_Tactician_macros.db"
+    },
+    {
+      "name": "Class_Talent",
+      "type": "Macro",
+      "label": "Class - Talent",
+      "path": "packs\\Class_Talent_macros.db"
     },
     {
       "name": "Class_Troubadour",

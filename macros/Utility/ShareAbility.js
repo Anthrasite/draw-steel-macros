@@ -22,8 +22,11 @@ try {
   const effect = await game.macros.getName(`ValidateParameter`).execute({ name: `effect`, value: scope.effect, type: `string`, nullable: true });
   const extraResourceCost = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceCost`, value: scope.extraResourceCost, type: `string`, nullable: true });
   const extraResourceEffect = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceEffect`, value: scope.extraResourceEffect, type: `string`, nullable: true });
+  const extraResourceCost2 = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceCost2`, value: scope.extraResourceCost2, type: `string`, nullable: true });
+  const extraResourceEffect2 = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceEffect2`, value: scope.extraResourceEffect2, type: `string`, nullable: true });
   const persistentCost = await game.macros.getName(`ValidateParameter`).execute({ name: `persistentCost`, value: scope.persistentCost, type: `number`, nullable: true });
   const persistentEffect = await game.macros.getName(`ValidateParameter`).execute({ name: `persistentEffect`, value: scope.persistentEffect, type: `string`, nullable: true });
+  const strainedEffect = await game.macros.getName(`ValidateParameter`).execute({ name: `strainedEffect`, value: scope.strainedEffect, type: `string`, nullable: true });
 
   const getCostFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getCostFunc`, value: scope.getCostFunc, type: `function`, nullable: true });
   const beforeRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `beforeRollFunc`, value: scope.beforeRollFunc, type: `function`, nullable: true });
@@ -31,6 +34,7 @@ try {
   const getExtraDamageFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `getExtraDamageFunc`, value: scope.getExtraDamageFunc, type: `function`, nullable: true });
   const afterRollFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `afterRollFunc`, value: scope.afterRollFunc, type: `function`, nullable: true });
   const extraResourceFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `extraResourceFunc`, value: scope.extraResourceFunc, type: `function`, nullable: true });
+  const onStrainedFunc = await game.macros.getName(`ValidateParameter`).execute({ name: `onStrainedFunc`, value: scope.onStrainedFunc, type: `function`, nullable: true });
 
   // Perform additional validation
   if (name.includes(`:`) || name.includes(`;`))
@@ -45,6 +49,10 @@ try {
     throw `Error: extraResourceCost and extraResourceEffect must be specified together`;
   if (typeof(extraResourceCost) !== `undefined` && !/[1-9][0-9]*\+?/.test(extraResourceCost))
     throw `Error: extraResourceCost cannot be 0`;
+  if (typeof(extraResourceCost2) !== typeof(extraResourceEffect2))
+    throw `Error: extraResourceCost2 and extraResourceEffect2 must be specified together`;
+  if (typeof(extraResourceCost2) !== `undefined` && !/[1-9][0-9]*\+?/.test(extraResourceCost2))
+    throw `Error: extraResourceCost2 cannot be 0`;
   if ((typeof(persistentCost) !== `undefined` || typeof(persistentEffect) !== `undefined`) && (typeof(persistentCost) !== `number` || typeof(persistentEffect) !== `string`))
     throw `Error: persistentCost and persistentEffect must be specified together`;
   if (typeof(persistentCost) !== `undefined` && persistentCost === 0)
@@ -55,7 +63,7 @@ try {
 
   const resource = await game.macros.getName(`GetAttribute`).execute({ activeActor, attributeName: `resource` });
 
-  const showUseButton = resourceCost || extraResourceCost || powerRollStat || beforeRollFunc || afterRollFunc;
+  const showUseButton = resourceCost || extraResourceCost || extraResourceCost2 || powerRollStat || beforeRollFunc || afterRollFunc;
   const canUse = showUseButton && (typeof(resourceCost) === `undefined` || resource.value >= resourceCost);
 
   // Calculate the colour for the ability type
@@ -71,7 +79,11 @@ try {
   }
 
   function highlightCharacteristic(tierEffect) {
-    return tierEffect.replaceAll(/(\s)([MAIRP])([\s,])/g, `$1<span style="color: white; background-color: black; padding: 0px 2px; border-radius: 2px;">$2</span>$3`);
+    const spanOpen = `<span style="color: white; background-color: black; padding: 0px 2px; border-radius: 2px;">`;
+    const spanClose = `</span>`;
+
+    return tierEffect.replaceAll(/(\s)([MAIRP])([\s,;])/g, `$1${spanOpen}$2${spanClose}$3`)
+      .replaceAll(/(\s)([MAIRP])$/g, `$1${spanOpen}$2${spanClose}`);
   }
 
   // Define functions for processing ability text
@@ -157,8 +169,10 @@ try {
         </table>
       ` : ``)}
       ${(effect ? formatTextWithLabel(`Effect`, effect) : ``)}
+      ${(strainedEffect ? formatTextWithLabel(`Strained`, strainedEffect) : ``)}
       ${(persistentCost ? formatTextWithLabel(`Persistent ${persistentCost}`, persistentEffect) : ``)}
       ${(extraResourceCost ? formatTextWithLabel(`Spend ${extraResourceCost} ${resource.label}`, extraResourceEffect) : ``)}
+      ${(extraResourceCost2 ? formatTextWithLabel(`Spend ${extraResourceCost2} ${resource.label}`, extraResourceEffect2) : ``)}
       ${(showUseButton ? `<button id="${buttonId}">${(canUse ? `Use` : `Not enough ${resource.label}`)}</button>` : ``)}`
   });
 
@@ -174,6 +188,7 @@ try {
         isKit,
         resourceCost,
         extraResourceCost,
+        extraResourceCost2,
         persistentCost,
         powerRollStat,
         tier1Effect,
@@ -184,7 +199,8 @@ try {
         getDamageFunc,
         getExtraDamageFunc,
         afterRollFunc,
-        extraResourceFunc
+        extraResourceFunc,
+        onStrainedFunc
       });
     });
   }
