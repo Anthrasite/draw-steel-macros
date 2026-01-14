@@ -1,0 +1,10 @@
+//@id=Y8b9ud3P7HBxUkOT
+//@name=Mind Projection
+//@img=icons/magic/perception/eye-ringed-glow-angry-small-teal.webp
+await game.macros.getName(`ShareFeature`).execute({
+  activeActor: actor,
+  name: `Mind Projection`,
+  description: `<p>As a maneuver, you project your mind outside your body. While you are in this state, your body remains unconscious and prone, and your mind is a separate entity with size 1T. Your mind automatically has concealment, and can freely move through solid matter. If you end your turn inside solid matter, you are forced out into the space where you entered it.</p>
+    <p>Any abilities or features you use originate from your mind. Both your mind and your body can take damage while separated, with any such damage applied to your Stamina. Your mind is instantly forced back into your body if you take any damage, and you can immediately return to your body as a free maneuver.</p>`,
+  source: `Class`,
+});
